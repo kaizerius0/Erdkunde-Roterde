@@ -1,47 +1,41 @@
 # Sprechskript – Oskar
-## Abschnitt 2: Entstehung (Ferrallitisierung)
+## Abschnitt 2: Verbreitung & Entstehungsbedingungen
 
 ---
 
 ### Einstieg
-- Entstehungsprozess heißt **Ferrallitisierung**
-- extrem langsamer Vorgang: **Hunderttausende bis Millionen Jahre**
+- Malte hat erklärt, was Roterde ist
+- jetzt: **wo** kommt sie vor, und **warum** genau dort?
 
-### Voraussetzungen
-- Temperatur: Jahresmittel **> 20 °C**
-- Niederschlag: **> 1500 mm/a**
-- stabile Landoberfläche (geringe Erosion)
-- Ausgangsgestein: Granit, Gneis, Basalt u.a. Silikatgesteine
+### Globale Verbreitung
+- Ferralsole kommen in den **feuchten Tropen und Subtropen** vor
+- Hauptgebiete:
+  - **Südamerika**: Amazonasbecken und Cerrado – über 40 % der Landesfläche Brasiliens
+  - **Afrika**: Kongobecken, Westafrika, Teile Madagaskars
+  - **Südostasien**: Borneo, Sumatra, Teile Indiens
+  - **Australien**: Nordaustralien (kleinere Vorkommen)
+- insgesamt: ca. **7,5 %** der eisfreien Landoberfläche weltweit
 
-### Prozess Schritt für Schritt
+### Warum genau dort? – Drei Faktoren
+- drei Bedingungen müssen gleichzeitig erfüllt sein:
+  1. **Klima**: ganzjährig warm (> 20 °C), viel Niederschlag (> 1500 mm/Jahr) → starke Verwitterung
+  2. **Geologie**: alte, stabile Landoberflächen – sogenannte Kratone (z.B. Brasilianischer Schild, Afrikanischer Schild)
+  3. **Zeit**: der Prozess braucht Hunderttausende bis Millionen Jahre ohne Unterbrechung
 
-**1. Chemische Verwitterung**
-- Kohlensäure im Sickerwasser greift Silikate an
-- Feldspäte, Glimmer, Pyroxene werden zersetzt
+### Warum nicht in Europa?
+- in Europa fehlen alle drei Voraussetzungen:
+  - **Eiszeiten** haben die Bodenentwicklung unterbrochen und junge Sedimente hinterlassen
+  - kühleres Klima → deutlich langsamere Verwitterung
+  - unsere Böden sind geologisch sehr jung
 
-**2. Desilifizierung + Entbasung**
-- lösliche Stoffe werden ausgewaschen: **Si, Ca, Mg, K, Na**
-- Boden verarmt an Nährstoffen
-- pH sinkt, Boden wird stark sauer
-
-**3. Anreicherung von Fe- und Al-Oxiden**
-- unlösliche Oxide bleiben zurück
-- **Fe²⁺ → Fe³⁺** (Oxidation) → Hämatit, Goethit
-- Aluminium bleibt als **Gibbsit** (Al(OH)₃)
-
-**4. Kaolinitbildung**
-- entsteht als Sekundär-Tonmineral
-- geringe KAK → schlechte Nährstoffspeicherung
-
-**5. Lateritverkrustung (Sonderfall)**
-- bei Wechsel von Nässe und Trockenheit
-- Eisenoxide härten **irreversibel** aus
-- ziegelartige Kruste, undurchdringlich für Wurzeln
-
-### Zeitliche Einordnung
-- 10³–10⁴ Jahre: Entbasung beginnt, Kaolinit bildet sich
-- 10⁴–10⁵ Jahre: tiefes Profil, deutliche Rotfärbung
-- ≥ 10⁶ Jahre: mächtige Lateritdecken möglich
+### Wie entsteht Roterde? – Ferrallitisierung
+- der Entstehungsprozess heißt **Ferrallitisierung**
+- was passiert:
+  - unter tropischen Bedingungen verwittert das Gestein extrem stark
+  - lösliche Bestandteile werden **ausgewaschen** (Kalzium, Magnesium, Kalium, Silizium)
+  - übrig bleiben **Eisen- und Aluminiumoxide** → die geben dem Boden die rote Farbe
+  - als Tonmineral entsteht hauptsächlich **Kaolinit** (kann Nährstoffe schlecht speichern)
+- der Boden ist das **Endprodukt extremer Verwitterung** – alles Lösliche ist raus
 
 ### Übergang
-→ Der Prozess erklärt, warum Roterde nur unter bestimmten Bedingungen vorkommt – Chris zeigt jetzt, wo genau.
+→ Oskar hat gezeigt, wo Roterde vorkommt und wie sie entsteht – Luc erklärt jetzt, wie dieser Boden aufgebaut ist und welche Eigenschaften er hat.

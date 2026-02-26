@@ -4,31 +4,32 @@
 ---
 
 ### Einstieg
-- Thema: Roterde
-- anderer Name: **Ferralsol** (WRB) oder **Oxisol** (US-Klassifikation)
-- Bodentyp der Tropen und Subtropen
+- unser Thema: **Roterde** – einer der wichtigsten Bodentypen der Tropen
+- wissenschaftlicher Name: **Ferralsol** (internationale Bodenklassifikation WRB)
+- in der US-Klassifikation: **Oxisol**
+- kommt in den feuchten Tropen und Subtropen vor
 
-### Definition
-- stark verwitterter, tiefgründiger Boden
-- Farbe: rot bis rotbraun
-- Ursache: hoher Gehalt an **Eisenoxiden** – v.a. **Hämatit** (rot) und **Goethit** (gelbbraun)
-
-### Mineralogische Einordnung
-- Tonmineral: **Kaolinit** (1:1-Schichtsilikat)
-- geringe **Kationenaustauschkapazität (KAK)** → Boden kann Nährstoffe kaum speichern
-- hoher Anteil an **Sesquioxiden** (Fe₂O₃, Al₂O₃)
-- kaum noch verwitterbare Primärminerale vorhanden
+### Was macht Roterde besonders?
+- auffällig: **intensive rote bis rotbraune Farbe**
+- Ursache: hoher Gehalt an **Eisenoxiden** im Boden
+  - Hämatit → rot
+  - Goethit → gelbbraun
+- der Boden ist **extrem stark verwittert** – stärker als fast alle Böden in Europa
+- er ist **sehr tiefgründig**, kann 5 bis über 20 Meter tief reichen
 
 ### Abgrenzung: Ferralsol vs. Laterit
-- **Ferralsol** = der gesamte Bodentyp (pedologisch)
-- **Laterit** = die verhärtete Kruste an der Oberfläche (geologisch)
+- die Begriffe werden oft verwechselt
+- **Ferralsol** = der Bodentyp als Ganzes (also das gesamte Profil)
+- **Laterit** = nur die verhärtete Kruste an der Oberfläche
 - nicht jeder Ferralsol bildet eine Lateritkruste
-- nicht jede Lateritkruste sitzt auf einem Ferralsol
+- die Verkrustung ist ein Sonderfall, kein Normalzustand
 
-### Abgrenzung zu anderen Böden
-- Braunerden/Luvisole: höhere KAK, 2:1-Tonminerale, weniger stark verwittert
-- Podsole: Verlagerung von Fe/Al in Spodic-Horizont, anderes Klima
-- Ferralsol: Endprodukt extremer Verwitterung – alles Lösliche ist weg
+### Warum ist Roterde wichtig?
+- Ferralsole bedecken ca. **7,5 % der eisfreien Landoberfläche**
+- sie sind der typische Boden unter dem **tropischen Regenwald**
+- trotzdem: der Boden selbst ist **extrem nährstoffarm**
+- die Fruchtbarkeit des Regenwaldes kommt nicht aus dem Boden, sondern aus der Vegetation selbst
+- → das macht ihn zu einem der spannendsten und problematischsten Böden der Erde
 
 ### Übergang
-→ Damit ist klar, was Roterde ist – Oskar erklärt jetzt, wie sie entsteht.
+→ Malte hat erklärt, was Roterde ist – Oskar zeigt jetzt, wo sie vorkommt und wie sie entsteht.

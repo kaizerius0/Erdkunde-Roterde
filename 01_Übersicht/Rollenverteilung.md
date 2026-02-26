@@ -1,66 +1,70 @@
 # Rollenverteilung – Präsentation Roterde
 
----
+***
 
-## Person 1: Malte
+## Person 1: **Malte – Einführung & Grundverständnis**
 
-- **Zuständig für:** Was ist Roterde? (Definition & Einordnung)
+- **Zuständig für:** Was ist Roterde?  
 - **Inhalte:**
-  - Definition: Ferralsol (WRB) / Oxisol (US Soil Taxonomy)
-  - Namensherkunft: rote Farbe durch Eisenoxide (Hämatit, Goethit)
-  - Abgrenzung: Ferralsol ≠ Laterit (Bodentyp vs. verhärtete Kruste)
-  - Mineralogische Kennzeichen: Kaolinit, niedrige KAK, Sesquioxide
-  - Abgrenzung zu anderen Bodentypen (Braunerde, Podsol)
-- **Übergang zu Oskar:** Damit ist geklärt, was Roterde ist – Oskar erklärt jetzt, wie sie entsteht.
+  - Definition (Ferralsol / Oxisol)  
+  - Namensherkunft (rote Farbe durch Eisenoxide)  
+  - Abgrenzung zu Laterit (Bodentyp vs. Kruste)  
+  - Typische Minerale und chemische Grundcharakteristik  
+  - Kurzer Ausblick: Warum dieser Bodentyp wichtig ist (Überleitung zu Oskar)  
 
----
+***
 
-## Person 2: Oskar
+## Person 2: **Oskar – Verbreitung & Entstehungsbedingungen**
 
-- **Zuständig für:** Entstehung (Ferrallitisierung)
+- **Zuständig für:** Wo kommt Roterde vor und unter welchen Bedingungen entsteht sie?  
 - **Inhalte:**
-  - Voraussetzungen: Temperatur >20 °C, Niederschlag >1500 mm/a, stabile Flächen
-  - Prozessablauf: chemische Verwitterung → Desilifizierung → Entbasung → Fe/Al-Anreicherung
-  - Kaolinitbildung als Endprodukt
-  - Zeitrahmen: Hunderttausende bis Millionen Jahre
-  - Sonderfall Lateritverkrustung (irreversibel)
-- **Übergang zu Chris:** Der Prozess erklärt, warum Roterde nur unter bestimmten Bedingungen vorkommt – Chris zeigt, wo genau.
+  - Klimazone (feuchte Tropen/Subtropen)  
+  - Geographische Hauptgebiete (Amazonas, Kongo, Südostasien)  
+  - Geologische Grundlagen (alte Kontinentalschilde, stabile Flächen)  
+  - Voraussetzungen für Ferrallitisierung (warme, feuchte Bedingungen, Zeitfaktor)  
+  - Verbindung zu Luc: „Wie sieht so ein Boden dann eigentlich aus?“  
 
----
+***
 
-## Person 3: Chris
+## Person 3: **Luc – Aufbau, Eigenschaften & Struktur**
 
-- **Zuständig für:** Verbreitung
+- **Zuständig für:** Wie ist Roterde aufgebaut und wie funktioniert sie?  
 - **Inhalte:**
-  - Klimazone: feuchte Tropen und Subtropen
-  - Hauptgebiete: Amazonasbecken, Kongobecken, Südostasien
-  - Flächenanteil: ca. 7,5 % der eisfreien Landoberfläche
-  - Geologischer Faktor: alte Kontinentalschilde
-  - Warum nicht in Europa: junge Böden, kühleres Klima, Vergletscherung
-- **Übergang zu Luc:** Chris hat gezeigt, wo Roterde vorkommt – Luc erklärt jetzt, welche Eigenschaften dieser Boden hat.
+  - Horizontaufbau und typische Tiefe  
+  - Physikalische Eigenschaften (locker, erosionsanfällig)  
+  - Chemische Eigenschaften (pH, KAK, Nährstoffarmut, P-Fixierung)  
+  - Bedeutung des Humus und Nährstoffkreislaufs  
+  - Paradoxon: armer Boden, aber dichter Regenwald  
 
----
+***
 
-## Person 4: Luc
+## Person 4: **Chris – Nutzung & ökologische Funktionen**
 
-- **Zuständig für:** Eigenschaften
+- **Zuständig für:** Welche Rolle spielt Roterde für Mensch und Umwelt?  
 - **Inhalte:**
-  - Physikalisch: tiefgründig, gute Struktur, erosionsanfällig ohne Vegetation
-  - Chemisch: pH 4–5,5, nährstoffarm, P-Fixierung, niedrige KAK
-  - Nährstoffkreislauf: Nährstoffe in Biomasse, nicht im Boden
-  - Das Paradox: üppiger Regenwald auf armem Boden
-  - Rolle des Humus: liefert Großteil der KAK
-- **Übergang zu Max:** Die Eigenschaften zeigen, warum die Nutzung von Roterde problematisch ist – das erklärt Max.
+  - Landwirtschaftliche Nutzung (Wanderfeldbau, Plantagenwirtschaft)  
+  - Ökologische Funktionen (CO₂-Speicher, Wasserhaushalt, Vegetationsbasis)  
+  - Probleme durch Nutzung (Erosion, Nährstoffverarmung, Krustenbildung)  
+  - Nachhaltige Alternativen: Kalkung, Agroforst, Mulchen  
 
----
+***
 
-## Person 5: Max
+## Person 5: **Max – Herausforderungen & Fazit**
 
-- **Zuständig für:** Nutzung & Probleme
+- **Zuständig für:** Was lernen wir daraus?  
 - **Inhalte:**
-  - Wanderfeldbau: Slash-and-Burn, funktioniert nur mit langer Brache
-  - Plantagenwirtschaft: Soja, Palmöl → erfordert Düngung und Kalkung
-  - Probleme: Nährstoffverarmung, Erosion, Lateritverkrustung, CO₂-Freisetzung
-  - Gegenmaßnahmen: Kalkung, Mulchen, Agroforstwirtschaft
-  - Fallbeispiel Cerrado
-  - Schlussaussage der Gruppe
+  - Regionale Fallbeispiele (z. B. Cerrado)  
+  - Zusammenfassung der wichtigsten Punkte  
+  - Zentrale Problematik: Nutzung vs. Erhaltung  
+  - Fazit der Gruppe („Warum ist Roterde wichtig und was kann man daraus lernen?“)  
+
+***
+
+### Warum das sinnvoll ist:
+
+- **Malte** gibt Orientierung (Begriffe + Basiswissen).  
+- **Oskar** zeigt den globalen Kontext und schafft Übergang zur Entstehung.  
+- **Luc** erklärt den inneren Aufbau, also den Kern des Themas.  
+- **Chris** deckt Funktion und Nutzung ab (praktische Bedeutung).  
+- **Max** schließt ab und verknüpft alles in einem Fazit mit Beispielen.  
+
