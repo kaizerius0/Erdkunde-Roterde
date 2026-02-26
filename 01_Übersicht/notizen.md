@@ -1,0 +1,2 @@
+# Notizen
+- wichtig ist, dass es nicht cringe ist. ki sagt zwar, dass dramarturgie etc wichtig ist, aber es wird sehr schnell sehr cringe, wenn man tatsächlich das vorliest, was die ki sagt. dementsprechent brauche ich kein skript, das würde es unmenschlich und komisch machen, nur stichpunkte, so dass jeder selbst so sagen kann wie er es natürlicher weise sagen würde. 
