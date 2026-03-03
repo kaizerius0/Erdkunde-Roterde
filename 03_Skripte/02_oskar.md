@@ -1,10 +1,13 @@
-# Oskar – Globale Verbreitung (ca. 2 Min.)
+# Oskar – Globale Verbreitung / Raumbezug (ca. 2 Min.)
 
-- **Klimazone**: Roterden sind streng begrenzt auf das immerfeuchte, warme Tropenklima zwischen ca. 20° Nord und 20° Süd (Regenwald und teils Feuchtsavanne).
-- **Fläche**: Das ist gigantisch, sie bedecken weltweit ca. 750 Millionen Hektar und sind dort oft der dominierende Bodentyp.
-- **Hauptregionen**: Finden sich auf alten Kontinentalschilden, vor allem in Südamerika (Zentralamazonien, Brasilianischer Schild) und Zentralafrika (Kongo-Becken), sowie Madagaskar und Nordaustralien.
-- **Zusammenhang**: Die hohen Temperaturen und die enorme Feuchtigkeit sind absolut zwingend, damit diese Bodenbildung überhaupt stattfinden kann. 
-- **Topographie / Raumtypisch**: Man findet sie fast immer auf alten, geologisch stabilen, flachwelligen Plateaus.
-- **Ausnahmen & Besonderheiten**: 
-  - In Südostasien ist Ferralsol deutlich seltener, weil dort junge Gebirge und Vulkane die Landoberflächen ständig verjüngen. Es fehlt dort einfach die *Zeit* (Millionen Jahre).
-  - In Deutschland gibt es kleinräumig noch fossile Reste aus dem Tertiär, diese nennt man heute *Ferrallit*.
+**Folie: Globale Verbreitung**
+"Danke Malte! Schauen wir auf die Weltkarte. Ferralsole sind Kinder der Tropen. Man findet sie in einem Gürtel zwischen 20 Grad Nord und 20 Grad Süd. Das entspricht genau der Zone, in der es das ganze Jahr über feucht und warm ist. Insgesamt bedecken sie etwa 750 Millionen Hektar."
+
+"Die Schwerpunkte liegen auf den alten Kontinentalschilden: Das Amazonasbecken in Brasilien und das Kongobecken in Zentralafrika. Dort ist der Boden der absolute Herrscher der Landschaft."
+
+**Folie: Raumbezug**
+"Warum finden wir sie dort? Sie brauchen alte, flachwellige Plateaus. In Südostasien zum Beispiel sind Ferralsole viel seltener. Warum? Weil dort durch Vulkane und Gebirgsfaltung der Boden ständig 'verjüngt' wird. Roterde braucht Millionen Jahre ungestörte Ruhe zum Reifen."
+
+"In Deutschland gibt es sie übrigens kaum noch – höchstens als fossile Reste aus dem Tertiär, als es hier auch noch tropisch warm war. Diese Reste nennen wir Ferrallit."
+
+*Überleitung: „Jetzt wissen wir, wo sie sind. Aber wie genau entstehen diese riesigen roten Schichten eigentlich? Luc erklärt es euch.“*

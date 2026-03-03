@@ -1,18 +1,15 @@
-# Luc – Entstehung & Merkmale (ca. 3 Min.)
+# Luc – Entstehung und Merkmale (ca. 2 Min.)
 
-**Entstehung (Ferrallitisierung)**
-- **Bedingung**: Es beginnt mit alten Silikatgesteinen (Granit, Basalt), die über *Millionen von Jahren* ungestört unter extremer Dauerhitze und Niederschlägen verwittern.
-- **Prozess 1 (Basenauswaschung)**: Starke Regenfälle waschen leicht lösliche Ionen wie Kalium, Calcium, Magnesium radikal aus dem Boden.
-- **Prozess 2 (Desilifizierung)**: Auch Kieselsäure wird ausgewaschen. Fast nur noch sehr schwerlösliches Eisen und Aluminium bleiben zurück.
-- **Prozess 3 (Ferrallitisierung)**: Der Bodenrest besteht am Ende fast nur noch aus Quarz, dem sehr einfachen Tonmineral *Kaolinit* und extrem viel aufoxidiertem Eisen (Hämatit). Das gibt diesem Boden die typische rote Farbe.
+**Folie: Entstehung & Verwitterung**
+"Danke Oskar! Die Geburtsstunde einer Roterde dauert Millionen von Jahren. Alles beginnt mit der **Basenauswaschung**: Starke Regenfälle spülen alle Nährstoffe wie Kalium oder Calcium radikal aus dem Gestein. Danach folgt die **Desilifizierung**, bei der sogar die Kieselsäure verschwindet. Übrig bleibt nur ein Rest aus Quarz, Kaolinit und massenhaft Eisen- und Aluminiumoxid – diesen Prozess nennen wir **Ferrallitisierung**."
 
-**Bodenhorizonte (Aufbau)**
-- **A-Horizont (Humus)**: Oben gibt es nur eine extrem geringe organische Auflage. Warum? Wegen der hohen Temperaturen und Feuchte wird organisches Material durch Bodenlebewesen in Tagen bis Wochen komplett zersetzt.
-- **B-Horizont (Verwitterung)**: Dieser Horizont ist mehrere Meter dick, intensiv gelb-orange-rot gefärbt und fast völlig ausgewaschen. Dies nennt man den "ferralischen Horizont".
-- **C-Horizont (Ausgangsgestein)**: Das Gestein liegt extrem tief (oft 5 bis 20 Meter). So tief, dass Pflanzenwurzeln dort gar nicht hinkommen, um Mineralstoffe aufzunehmen.
+**Folie: Der Ferralische Horizont**
+"Schaut euch das Profil an. Oben im A-Horizont wird die Streu in nur wenigen Tagen abgebaut. Darunter kommt der B-Horizont, der eigentliche Ferralsol. Er ist oft viele Meter dick und intensiv rot. Der C-Horizont, also das unveränderte Gestein, liegt meist in 5 bis 20 Metern Tiefe – viel zu tief für die meisten Wurzeln."
 
-**Merkmale & Nährstoff-Paradox**
-- **Sauer & Nährstoffarm**: Der Boden ist extrem tiefgründig und chemisch sehr sauer (pH 4 bis 5,5). Es gibt fast keine Kationenaustauschkapazität (KAK), d.h. der Boden kann kaum Nährstoffe speichern (wie ein löchriges Fass).
-- **Physikalisch exzellent**: Trotzdem ist der Boden gut! Er bildet durch Mikroaggregation sogenannte *Pseudosande*. Er trocknet nicht rissig aus, bleibt porös, wasserdurchlässig und physikalisch stabil.
-- **Das Paradox**: Wie kann überhaupt ein Regenwald darauf wachsen?
-- **Die Lösung**: Der gigantische Regenwald existiert durch einen extrem engen, geschlossenen Nährstoffkreislauf. Fast alle verfügbaren Nährstoffe des gesamten Waldes stecken *in der oberirdischen Biomasse* (den Bäumen und toten Blättern), und *nicht* tief unten im anorganischen Boden! Krankt der Wald, ist das System kaputt.
+**Folie: Physikalische & Chemische Merkmale**
+"Das Besondere: Physikalisch ist der Boden super! Trotz viel Ton fühlt er sich wie Sand an – wir nennen das 'Pseudosand'. Er ist extrem wasserdurchlässig. Aber chemisch ist er ein Flop: Er ist sehr sauer (pH 4-5,5) und kann fast keine Nährstoffe speichern. Dünger wird oft sofort fixiert und ist für Pflanzen nutzlos."
+
+**Folie: Das Nährstoff-Paradoxon**
+"Wie kann dann dort dieser Wald wachsen? Es ist das Nährstoff-Paradoxon. Der Kreislauf ist extrem eng. Die Nährstoffe zirkulieren nur oben in der Biomasse. Sobald ein Blatt fällt, wird es sofort wieder aufgesaugt. Wenn der Mensch den Wald rodet, bricht dieses geniale System radikal und meist für immer zusammen."
+
+*Überleitung: „Was das für die Menschen bedeutet, die dort Landwirtschaft betreiben wollen, zeigt euch jetzt Chris.“*
