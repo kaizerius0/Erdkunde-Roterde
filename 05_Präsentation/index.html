@@ -437,6 +437,73 @@
       border-radius: 2px;
       margin: 20px auto;
     }
+
+    /* ─── Fullscreen Modal ─── */
+    .fullscreen-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 15, 15, 0.95);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .fullscreen-modal.active {
+      display: flex;
+    }
+
+    .fullscreen-content {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+      object-fit: contain;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .fullscreen-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 8px 18px;
+      background: var(--surface-2);
+      border: 1px solid var(--surface);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .fullscreen-btn:hover {
+      background: var(--accent-glow);
+      color: var(--accent-soft);
+      border-color: rgba(192, 57, 43, 0.3);
+    }
   </style>
 </head>
 
@@ -467,408 +534,289 @@
         <h2>Inhaltsverzeichnis</h2>
         <ul class="bullets">
           <li><strong>1. Einführung:</strong> Was ist Roterde? <span class="dim">(Malte)</span></li>
-          <li><strong>2. Verbreitung & Entstehung:</strong> Wo und wie entsteht sie? <span class="dim">(Oskar)</span>
-          </li>
-          <li><strong>3. Aufbau & Eigenschaften:</strong> Das Nährstoff-Paradox <span class="dim">(Luc)</span></li>
-          <li><strong>4. Nutzung & Ökologie:</strong> Wanderfeldbau und Plantagenwirtschaft <span
+          <li><strong>2. Globale Verbreitung:</strong> Raumbezug in den Tropen <span class="dim">(Oskar)</span></li>
+          <li><strong>3. Entstehung & Merkmale:</strong> Prozesse und Eigenschaften <span class="dim">(Luc)</span></li>
+          <li><strong>4. Nutzung & Herausforderungen:</strong> Agrar- und Industriewirtschaft <span
               class="dim">(Chris)</span></li>
-          <li><strong>5. Herausforderungen & Fazit:</strong> Fallbeispiel Cerrado <span class="dim">(Max)</span></li>
+          <li><strong>5. Fazit:</strong> Geografische Bewertung <span class="dim">(Max)</span></li>
         </ul>
       </div>
     </div>
 
     <!-- ═══════ MALTE – Einführung ═══════ -->
-
-    <!-- Malte: Was ist Roterde? -->
     <div class="slide" data-speaker="Malte – Einführung">
       <div class="slide-inner">
         <span class="section-badge">Abschnitt 1 · Einführung</span>
         <h2>Was ist Roterde?</h2>
         <ul class="bullets">
-          <li>Einer der wichtigsten <strong>Bodentypen der Tropen</strong></li>
-          <li>Wissenschaftlicher Name: <strong>Ferralsol</strong></li>
-          <li>Auffällig: <strong>intensive rote bis rotbraune Farbe</strong> <span class="dim">→ durch
-              Eisenoxide</span></li>
-          <li><strong>Extrem stark verwittert</strong> – stärker als fast alle Böden in Europa</li>
-          <li>Sehr <strong>tiefgründig</strong>: 5 bis über 20 Meter tief</li>
+          <li><strong>Einstieg:</strong> Auffällige rote Böden sind ein markantes Kennzeichen tropischer Landschaften
+            weltweit.</li>
+          <li><strong>Definition:</strong> Spezifische tropische Bodenform, die extrem stark verwittert und sehr reich
+            an Eisenoxiden ist.</li>
+          <li><strong>Wichtig:</strong> "Roterde" meint nicht den oft harten Eisenstein (Laterit / Plinthit), sondern
+            den echten, tiefgründigen Boden (mit ferralischem Horizont).</li>
         </ul>
       </div>
     </div>
 
-    <!-- Malte: Ferralsol vs. Laterit -->
     <div class="slide" data-speaker="Malte – Einführung">
       <div class="slide-inner">
         <span class="section-badge">Abschnitt 1 · Einführung</span>
-        <h2>Ferralsol ≠ Laterit</h2>
-        <div class="compare">
-          <div class="compare-card">
-            <h3>Ferralsol</h3>
-            <ul>
-              <li>Der Bodentyp als Ganzes</li>
-              <li>Gesamtes Bodenprofil</li>
-              <li>Nicht immer verhärtet</li>
-            </ul>
-          </div>
-          <div class="compare-card alt">
-            <h3>Laterit</h3>
-            <ul>
-              <li>Nur die verhärtete Kruste</li>
-              <li>Sonderfall, kein Normalzustand</li>
-              <li>Irreversibel</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Malte: Warum ist Roterde wichtig? -->
-    <div class="slide" data-speaker="Malte – Einführung">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 1 · Einführung</span>
-        <h2>Warum ist Roterde wichtig?</h2>
+        <h2>Einordnung & Funktion</h2>
         <ul class="bullets">
-          <li>Bedeckt ca. <strong>7,5 %</strong> der eisfreien Landoberfläche</li>
-          <li>Typischer Boden unter dem <strong>tropischen Regenwald</strong></li>
-          <li>Trotzdem: <strong>extrem nährstoffarm</strong></li>
-          <li>Fruchtbarkeit kommt aus der <strong>Vegetation</strong>, nicht aus dem Boden</li>
-          <li>→ einer der spannendsten und <strong>problematischsten Böden</strong> der Erde</li>
+          <li><strong>Einordnung:</strong> Zählt in der internationalen Bodenkunde zur <strong>WRB-Referenzbodengruppe
+              Ferralsol</strong> (in den USA oft ≈ Oxisol).</li>
+          <li><strong>Zusammensetzung:</strong> Dominiert von Kaolinit (Tonmineral) sowie Eisen- (Hämatit, Goethit) und
+            Aluminiumoxiden (Gibbsit).</li>
+          <li><strong>Funktion:</strong> Bildet die physikalisch hervorragend strukturierte, wenn auch chemisch stark
+            ausgelaugte Basis für tropische Ökosysteme (Regenwald).</li>
         </ul>
       </div>
     </div>
 
-    <!-- ═══════ OSKAR – Verbreitung & Entstehung ═══════ -->
-
-    <!-- Oskar: Globale Verbreitung -->
-    <div class="slide" data-speaker="Oskar – Verbreitung & Entstehung">
+    <!-- ═══════ OSKAR – Globale Verbreitung ═══════ -->
+    <div class="slide" data-speaker="Oskar – Globale Verbreitung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 2 · Verbreitung & Entstehung</span>
+        <span class="section-badge">Abschnitt 2 · Globale Verbreitung & Raumbezug</span>
         <h2>Globale Verbreitung</h2>
-        <p class="keyword">Feuchte Tropen und Subtropen</p>
-        <div style="display: flex; gap: 40px; align-items: center;">
-          <div style="flex: 1;">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Region</th>
-                  <th>Vorkommen</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Südamerika</td>
-                  <td>Amazonasbecken, Cerrado – &gt; 40 % Brasiliens</td>
-                </tr>
-                <tr>
-                  <td>Afrika</td>
-                  <td>Kongobecken, Westafrika, Madagaskar</td>
-                </tr>
-                <tr>
-                  <td>Südostasien</td>
-                  <td>Borneo, Sumatra, Teile Indiens</td>
-                </tr>
-                <tr>
-                  <td>Australien</td>
-                  <td>Nordaustralien (kleinere Vorkommen)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div style="flex: 1.5;">
+        <div style="display: flex; gap: 40px; align-items: flex-start;">
+          <ul class="bullets" style="flex: 1;">
+            <li><strong>Klimazone:</strong> Streng begrenzt zwischen ca. 20° N und 20° S (feuchtwarme Tropen/Savannen).
+            </li>
+            <li><strong>Fläche:</strong> Ca. 750 Millionen Hektar weltweit.</li>
+            <li><strong>Hauptregionen:</strong> Kongo-Becken (Zentralafrika) und Zentralamazonien (Brasilianischer
+              Schild).</li>
+          </ul>
+          <div style="flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center;">
             <img src="img/verbreitung.jpg" alt="Weltkarte Verbreitung"
               style="width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+            <div class="fullscreen-btn" onclick="openModal('img/verbreitung.jpg')">⛶ Auf Vollbild</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Oskar: Warum genau dort? -->
-    <div class="slide" data-speaker="Oskar – Verbreitung & Entstehung">
+    <div class="slide" data-speaker="Oskar – Globale Verbreitung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 2 · Verbreitung & Entstehung</span>
-        <h2>Warum genau dort?</h2>
-        <p class="keyword">Drei Faktoren müssen zusammentreffen</p>
-        <div class="grid-3">
-          <div class="card">
-            <div class="icon">🌡️</div>
-            <h4>Klima</h4>
-            <p>Ganzjährig warm (&gt; 20 °C), viel Niederschlag (&gt; 1500 mm/a)</p>
-          </div>
-          <div class="card">
-            <div class="icon">🪨</div>
-            <h4>Geologie</h4>
-            <p>Alte, stabile Kratone (Brasilianischer Schild, Afrikanischer Schild)</p>
-          </div>
-          <div class="card">
-            <div class="icon">⏳</div>
-            <h4>Zeit</h4>
-            <p>Hunderttausende bis Millionen Jahre ohne Unterbrechung</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Oskar: Warum nicht in Europa? -->
-    <div class="slide" data-speaker="Oskar – Verbreitung & Entstehung">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 2 · Verbreitung & Entstehung</span>
-        <h2>Warum nicht in Europa?</h2>
+        <span class="section-badge">Abschnitt 2 · Globale Verbreitung & Raumbezug</span>
+        <h2>Raumbezug</h2>
         <ul class="bullets">
-          <li><strong>Eiszeiten</strong> haben die Bodenentwicklung unterbrochen</li>
-          <li>Junge Sedimente durch Vergletscherung</li>
-          <li>Kühleres Klima → <strong>deutlich langsamere</strong> Verwitterung</li>
-          <li>Unsere Böden sind geologisch <strong>sehr jung</strong></li>
+          <li><strong>Zusammenhang:</strong> Hohe Temperaturen und enorme Feuchte sind zwingend für die Bodenbildung.
+          </li>
+          <li><strong>Topographie:</strong> Treten meist auf alten, geologisch stabilen, flachwelligen
+            Kontinentalschilden auf.</li>
+          <li><strong>Ausnahmen:</strong> In Südostasien seltener (junge Gebirge/Vulkane verhindern millionenjährige
+            Verwitterung). In Deutschland gibt es teils noch fossile Reste (Ferrallit) aus dem Tertiär.</li>
         </ul>
       </div>
     </div>
 
-    <!-- Oskar: Ferrallitisierung -->
-    <div class="slide" data-speaker="Oskar – Verbreitung & Entstehung">
+    <!-- ═══════ LUC – Entstehung & Merkmale ═══════ -->
+    <div class="slide" data-speaker="Luc – Entstehung & Merkmale">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 2 · Verbreitung & Entstehung</span>
-        <h2>Wie entsteht Roterde?</h2>
-        <p class="keyword">Ferrallitisierung</p>
+        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
+        <h2>Entstehung (Ferrallitisierung)</h2>
         <ul class="bullets">
-          <li>Tropische Bedingungen → Gestein verwittert <strong>extrem stark</strong></li>
-          <li>Lösliche Bestandteile werden <strong>ausgewaschen</strong> <span class="dim">(Kalzium, Magnesium,
-              Kalium)</span></li>
-          <li>Übrig bleiben <strong>Eisen- und Aluminiumoxide</strong> → rote Farbe</li>
-          <li>Es entsteht <strong>Kaolinit</strong> <span class="dim">→ kann Nährstoffe schlecht speichern</span></li>
-          <li>Ergebnis: <strong>Endprodukt extremer Verwitterung</strong> – alles Lösliche ist raus</li>
+          <li><strong>Bedinung:</strong> Millionen Jahre ungestörte tropische Verwitterung von alten Silikatgesteinen.
+          </li>
+          <li><strong>1. Basenauswaschung:</strong> Starke Regenfälle waschen lösliche Ionen (Kalium, Calcium,
+            Magnesium) radikal aus.</li>
+          <li><strong>2. Desilifizierung:</strong> Kieselsäure wird ausgewaschen, fast nur schwerlösliches Eisen und
+            Aluminium bleiben zurück.</li>
+          <li><strong>3. Ferrallitisierung:</strong> Der Bodenrest besteht am Ende fast nur noch aus Quarz, dem
+            Tonmineral Kaolinit und extrem viel aufoxidiertem Eisen (rote Farbe).</li>
         </ul>
       </div>
     </div>
 
-    <!-- ═══════ LUC – Aufbau & Eigenschaften ═══════ -->
-
-    <!-- Luc: Aufbau -->
-    <div class="slide" data-speaker="Luc – Aufbau & Eigenschaften">
+    <!-- DEDICATED SOIL HORIZON SLIDE -->
+    <div class="slide" data-speaker="Luc – Entstehung & Merkmale">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Aufbau & Eigenschaften</span>
-        <h2>Aufbau</h2>
+        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
+        <h2>Bodenhorizonte (Aufbau)</h2>
         <div style="display: flex; gap: 40px; align-items: center;">
-          <ul class="bullets" style="flex: 1;">
-            <li>Oben: dünne <strong>organische Auflage</strong></li>
-            <li>Darunter: <strong>intensiv rot gefärbter Haupthorizont</strong></li>
-            <li>Unten: gradueller Übergang ins verwitterte Ausgangsgestein</li>
-            <li>Rotfärbung durch <strong>Eisenoxide</strong>, die sich über Jahrmillionen angereichert haben</li>
-          </ul>
           <div style="flex: 1; text-align: center;">
             <img src="img/Aufbau.png" alt="Bodenprofil Schema"
               style="max-height: 480px; max-width: 100%; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+            <div class="fullscreen-btn" onclick="openModal('img/Aufbau.png')">⛶ Auf Vollbild</div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Luc: Tiefe in echt -->
-    <div class="slide" data-speaker="Luc – Aufbau & Eigenschaften">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Aufbau & Eigenschaften</span>
-        <h2>Tiefe in echt</h2>
-        <div style="display: flex; flex-direction: column; gap: 32px;">
-          <ul class="bullets"
-            style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; flex-direction: row;">
-            <li><strong>Extrem tiefgründig</strong> – Profil reicht oft 5 bis über 20 Meter</li>
-            <li>Die enorme Mächtigkeit wird in natürlichen Aufschlüssen sichtbar</li>
-            <li>Trotz der Tiefe ist der Boden extrem nährstoffarm</li>
+          <ul class="bullets" style="flex: 1; margin-top: 0;">
+            <li><strong>A-Horizont (Humus):</strong> Geringe organische Auflage durch extrem schnellen biologischen
+              Abbau (Tage bis Wochen).</li>
+            <li><strong>B-Horizont (Verwitterung):</strong> Mehrere Meter dick, intensiv rot, fast völlig ausgewaschen
+              ("ferralischer Horizont").</li>
+            <li><strong>C-Horizont (Ausgangsgestein):</strong> Liegt oft so tief (5–20m), dass Pflanzenwurzeln ihn zur
+              Mineralstoffversorgung nicht mehr erreichen können.</li>
           </ul>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start;">
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" data-speaker="Luc – Entstehung & Merkmale">
+      <div class="slide-inner">
+        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
+        <h2>Merkmale der Roterde</h2>
+        <div style="display: flex; gap: 40px; align-items: flex-start;">
+          <ul class="bullets" style="flex: 1;">
+            <li><strong>Eigenschaften:</strong> Extrem tiefgründig und chemisch sehr sauer (pH 4 – 5,5).</li>
+            <li><strong>Physikalisch gut:</strong> Durch Mikroaggregation bildet Kaolinit sogenannte Pseudosande. Der
+              Boden ist porös, extrem wasserdurchlässig und stabil.</li>
+            <li><strong>Chemisch schlecht:</strong> Fast keine Kationenaustauschkapazität (Nährstoffspeicher). Stark
+              <strong>nährstoffarm</strong>.
+            </li>
+          </ul>
+          <div style="flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center;">
             <img src="img/tiefe.JPG" alt="Tiefe 1"
-              style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
-            <img src="img/tiefe2.png" alt="Tiefe 2"
-              style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+              style="max-height: 250px; width: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+            <div class="fullscreen-btn" onclick="openModal('img/tiefe.JPG')">⛶ Auf Vollbild</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Luc: Physikalische + Chemische Eigenschaften -->
-    <div class="slide" data-speaker="Luc – Aufbau & Eigenschaften">
+    <div class="slide" data-speaker="Luc – Entstehung & Merkmale">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Aufbau & Eigenschaften</span>
-        <h2>Eigenschaften</h2>
-        <div class="compare">
-          <div class="compare-card">
-            <h3>Physikalisch</h3>
-            <ul>
-              <li>Gute Krümelstruktur</li>
-              <li>Gute Wasserdurchlässigkeit</li>
-              <li>Ohne Vegetation: stark erosionsanfällig</li>
-            </ul>
-          </div>
-          <div class="compare-card alt">
-            <h3>Chemisch</h3>
-            <ul>
-              <li>pH 4–5,5 (stark sauer)</li>
-              <li>Extrem nährstoffarm</li>
-              <li>Phosphat im Boden gebunden</li>
-              <li>Nährstoffe kaum speicherbar</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Luc: Nährstoff-Paradox -->
-    <div class="slide" data-speaker="Luc – Aufbau & Eigenschaften">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Aufbau & Eigenschaften</span>
+        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
         <h2>Das Nährstoff-Paradox</h2>
-        <p class="keyword">Dichter Regenwald auf extrem armem Boden?</p>
-        <div class="cycle">
-          <div class="cycle-node">🌳 Baum</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">🍂 Streufall</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">🦠 Sofortige Zersetzung</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">🌱 Wurzelaufnahme</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">🌳 Baum</div>
-        </div>
-        <ul class="bullets" style="margin-top: 24px;">
-          <li>Boden = nur <strong>Durchgangsmedium</strong></li>
-          <li>Nährstoffe stecken in der <strong>Vegetation</strong>, nicht im Boden</li>
-          <li><strong>7–10 t</strong> Streufall pro ha/Jahr im Amazonas</li>
-          <li><strong>Humus</strong> in der Oberschicht ist entscheidend für die Fruchtbarkeit</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ═══════ CHRIS – Nutzung & Ökologie ═══════ -->
-
-    <!-- Chris: Wanderfeldbau -->
-    <div class="slide" data-speaker="Chris – Nutzung & Ökologie">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Ökologie</span>
-        <h2>Wanderfeldbau</h2>
-        <p class="keyword">Slash-and-Burn</p>
         <ul class="bullets">
-          <li>Wald roden → <strong>Asche als Dünger</strong> → 2–3 Jahre anbauen</li>
-          <li>Danach: <strong>10–20 Jahre Brache</strong> nötig</li>
-          <li>Problem heute: Bevölkerungswachstum → Brachezeiten <strong>immer kürzer</strong></li>
-          <li>Boden erholt sich <strong>nicht mehr</strong></li>
+          <li><strong>Das Paradox:</strong> Wie kann auf einem der nährstoffärmsten Böden der Erde der gigantische
+            tropische Regenwald wachsen?</li>
+          <li><strong>Die Lösung:</strong> Ein extrem enger, geschlossener Nährstoffkreislauf.</li>
+          <li>Alle verfügbaren Nährstoffe stecken in der lebenden und gerade erst abgestorbenen Biomasse, nicht tief
+            unten im toten Mineralboden.</li>
         </ul>
       </div>
     </div>
 
-    <!-- Chris: Plantagenwirtschaft + Cerrado -->
-    <div class="slide" data-speaker="Chris – Nutzung & Ökologie">
+    <!-- ═══════ CHRIS – Nutzung & Herausforderungen ═══════ -->
+    <div class="slide" data-speaker="Chris – Nutzung & Herausforderungen">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Ökologie</span>
-        <h2>Plantagenwirtschaft</h2>
-        <p class="keyword">Fallbeispiel Cerrado (Brasilien)</p>
+        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <h2>Landwirtschaft & Gefahren</h2>
         <ul class="bullets">
-          <li>Cash Crops: <strong>Soja, Palmöl, Kaffee, Kautschuk</strong></li>
-          <li>Funktioniert nur mit <strong>massiver Kalkung</strong> (2–6 t/ha) und <strong>Düngung</strong></li>
-          <li>Cerrado: &gt; <strong>60 %</strong> der brasilianischen Agrarproduktion</li>
-          <li>Aber: ca. <strong>50 %</strong> der Vegetation bereits zerstört</li>
+          <li><strong>Nutzung:</strong> Dauerkulturen (Kaffee, Tee, Zuckerrohr) und Wanderfeldbau ("Shifting
+            Cultivation") mit teils nötigen 10–30 Jahren Brache zur Regeneration.</li>
+          <li><strong>Probleme:</strong> Massive Nährstoffauswaschung, Phosphorfoxierung (P bindet fest an
+            Eisen/Aluminium) und toxische Aluminium-Konzentrationen bei sinkendem pH-Wert.</li>
+          <li><strong>Gefahr:</strong> Bei unbedachter Abholzung droht sofortiger Nährstoffverlust und abnehmende
+            Wasserspeicherfähigkeit für Flachwurzler.</li>
         </ul>
       </div>
     </div>
 
-    <!-- Chris: Ökologische Funktionen -->
-    <div class="slide" data-speaker="Chris – Nutzung & Ökologie">
+    <div class="slide" data-speaker="Chris – Nutzung & Herausforderungen">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Ökologie</span>
-        <h2>Ökologische Funktionen</h2>
+        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <h2>Industrielle Nutzung</h2>
         <ul class="bullets">
-          <li>Standort des <strong>tropischen Regenwaldes</strong> → artenreichster Lebensraum</li>
-          <li>Speichert große Mengen <strong>Kohlenstoff</strong> (Humus + Vegetation)</li>
-          <li>Reguliert den <strong>Wasserhaushalt</strong> <span class="dim">(Versickerung, Grundwasser,
-              Erosionsschutz)</span></li>
-          <li>Abholzung zerstört diese Funktionen → <strong>Folgen sind global spürbar</strong></li>
+          <li>Aufgrund der über Jahrmillionen anhaltenden Auswaschung bleiben schwer lösliche Oxide in gigantischen
+            Mengen zurück.</li>
+          <li>In manchen Ferralsolen erreicht der Aluminiumgehalt Erzqualität.</li>
+          <li>Sie werden deshalb im großen Maßstab für den <strong>Bauxitabbau</strong> umgegraben (Aluminiumgewinnung),
+            was das Bodenprofil oft irreparabel zerstört.</li>
         </ul>
       </div>
     </div>
 
-    <!-- Chris: Probleme + Lösungen -->
-    <div class="slide" data-speaker="Chris – Nutzung & Ökologie">
+    <div class="slide" data-speaker="Chris – Nutzung & Herausforderungen">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Ökologie</span>
-        <h2>Probleme & nachhaltige Alternativen</h2>
+        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <h2>Lösungsansätze</h2>
         <div class="compare">
           <div class="compare-card">
-            <h3>Probleme</h3>
+            <h3>Agroforst & Terra Preta</h3>
             <ul>
-              <li>Nährstoffverarmung nach 2–3 Jahren</li>
-              <li>Erosion durch tropische Starkregen</li>
-              <li>Lateritverkrustung (irreversibel)</li>
-              <li>CO₂-Freisetzung (~304 Mio. t/a)</li>
+              <li><strong>Agroforst:</strong> Imitiert den Regenwald aus mehrschichtiger Vegetation.</li>
+              <li><strong>Biochar:</strong> Pflanzenkohle (Terra Preta Prinzip) bindet Nährstoffe dauerhaft und stoppt
+                die Auswaschung.</li>
             </ul>
           </div>
           <div class="compare-card alt">
-            <h3>Alternativen</h3>
+            <h3>Modernes Management</h3>
             <ul>
-              <li>Kalkung + gezielte Düngung</li>
-              <li>Mulchen + Zwischenfrüchte</li>
-              <li>Agroforstwirtschaft</li>
-              <li>Direktsaat (Bodenbedeckung)</li>
+              <li>Ständige Bodenbedeckung (Mulchen) und gezielte P-Düngung.</li>
+              <li><strong>Kalkung (Liming):</strong> Hebt den sauren pH-Wert und verringert die Aluminiumtoxizität.</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ═══════ MAX – Herausforderungen & Fazit ═══════ -->
-
-    <!-- Max: Cerrado-Fallbeispiel -->
-    <div class="slide" data-speaker="Max – Fazit">
+    <!-- NEU BEI CHRIS: Bebauung & Lateritziegel mit Fotos -->
+    <div class="slide" data-speaker="Chris – Nutzung & Herausforderungen">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 5 · Herausforderungen & Fazit</span>
-        <h2>Fallbeispiel: Cerrado</h2>
-        <p class="keyword">Größte Savannenregion Südamerikas</p>
-        <ul class="bullets">
-          <li>Ca. <strong>2 Millionen km²</strong> <span class="dim">– sechsmal so groß wie Deutschland</span></li>
-          <li>Seit den 1970er-Jahren: massive Umwandlung in <strong>Agrarland</strong></li>
-          <li>Über <strong>60 %</strong> der brasilianischen Agrarproduktion</li>
-          <li>Ca. <strong>50 %</strong> der ursprünglichen Vegetation verloren</li>
-          <li><strong>304 Mio. t CO₂e</strong> pro Jahr durch Landumwandlung (2022)</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Max: Nutzung vs. Erhaltung -->
-    <div class="slide" data-speaker="Max – Fazit">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 5 · Herausforderungen & Fazit</span>
-        <h2>Nutzung vs. Erhaltung</h2>
-        <ul class="bullets">
-          <li>Nutzung möglich – <strong>aber nur mit hohem Aufwand</strong></li>
-          <li>Nährstoffkreislauf wird durch <strong>Rodung unterbrochen</strong></li>
-          <li>Nährstoffe stecken in der Vegetation, <strong>nicht im Boden</strong></li>
-          <li>Ohne Wald: Boden verliert in <strong>wenigen Jahren</strong> seine Fruchtbarkeit</li>
-          <li>Schlimmster Fall: <strong>Lateritverkrustung</strong> – irreversibel</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Max: Schlussaussage -->
-    <div class="slide" data-speaker="Max – Fazit">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 5 · Herausforderungen & Fazit</span>
-        <h2>Fazit</h2>
-        <div class="earth-line" style="margin: 0 0 32px 0;"></div>
-        <div class="summary-points">
-          <div class="point">
-            <span class="num">1</span>
-            <p>Roterde <strong>wirkt fruchtbar</strong> (dichter Regenwald) – ist aber <strong>extrem
-                nährstoffarm</strong></p>
-          </div>
-          <div class="point">
-            <span class="num">2</span>
-            <p><strong>Klima, Geologie, Vegetation und Boden</strong> hängen eng zusammen</p>
-          </div>
-          <div class="point">
-            <span class="num">3</span>
-            <p>Wer den Regenwald rodet, <strong>zerstört auch den Boden</strong> darunter</p>
-          </div>
-          <div class="point">
-            <span class="num">4</span>
-            <p>Nachhaltiger Umgang mit Ferralsolen ist eine der großen <strong>geographischen
-                Herausforderungen</strong> unserer Zeit</p>
+        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <h2>Bebauung & Lateritziegel</h2>
+        <div style="display: flex; gap: 30px; align-items: center;">
+          <ul class="bullets" style="flex: 1;">
+            <li><strong>Baugrund:</strong> Ferralsol bietet einen extrem stabilen, tiefgründigen Baugrund.</li>
+            <li><strong>Laterisierung:</strong> Trocknet der Boden (nach Abholzung) extrem aus, verhärten die Eisenoxide
+              irreversibel zu betonharten Krusten.</li>
+            <li><strong>Problem:</strong> Diese Schichten ("Lateritkrusten") machen Landwirtschaft völlig unmöglich.
+            </li>
+            <li><strong>Materialnutzung:</strong> Andererseits wird Laterit traditionell als massives Baumaterial (aus
+              dem Boden gestochene Ziegel) genutzt.</li>
+          </ul>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+            <div style="text-align: center;">
+              <img src="img/laterit-abbau.png" alt="Laterit Abbau"
+                style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+              <div class="fullscreen-btn" onclick="openModal('img/laterit-abbau.png')"
+                style="margin-top: 6px; padding: 4px 10px; font-size: 0.75rem;">⛶ Vollbild</div>
+            </div>
+            <div style="text-align: center;">
+              <img src="img/laterit-ziegel.png" alt="Laterit Ziegel"
+                style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+              <div class="fullscreen-btn" onclick="openModal('img/laterit-ziegel.png')"
+                style="margin-top: 6px; padding: 4px 10px; font-size: 0.75rem;">⛶ Vollbild</div>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- ═══════ MAX – Fazit / Geografische Bewertung ═══════ -->
+    <div class="slide" data-speaker="Max – Bebauung & Laterit">
+      <div class="slide-inner">
+        <span class="section-badge">Abschnitt 5 · Fazit</span>
+        <h2>Nutzung für Bebauung & Lateritziegel</h2>
+        <ul class="bullets">
+          <li><strong>Baugrund:</strong> Ferralsol ist ein extrem stabiler, tiefgründiger Baugrund.</li>
+          <li><strong>Laterisierung:</strong> Der Boden verhärtet durch Eisenoxide massiv zu harten Schichten.</li>
+          <li><strong>Problem:</strong> Diese harten Schichten ("Lateritkrusten") machen den Boden in der Landwirtschaft
+            kaum noch bearbeitbar.</li>
+          <li><strong>Baumaterial:</strong> Andererseits wird Laterit (aus dem Boden gestochene Ziegel) traditionell
+            direkt als hartes Baumaterial genutzt.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide" data-speaker="Max – Gesamtfazit zur Roterde">
+      <div class="slide-inner">
+        <span class="section-badge">Abschnitt 5 · Fazit</span>
+        <h2>Gesamtfazit zur Roterde (Ferralsol)</h2>
+        <ul class="bullets">
+          <li><strong>Erscheinung:</strong> Tiefgründig, stark verwittert und leuchtend rot gefärbt.</li>
+          <li><strong>Chemie:</strong> Sehr nährstoffarm und sauer.</li>
+          <li><strong>Bewertung:</strong> Ein insgesamt sehr stabiler, aber extrem ausgelaugter Boden mit sehr geringer
+            Fruchtbarkeit.</li>
+          <li><strong>Einordnung:</strong> Der typische, dominierende Boden der feuchten Tropen.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide" data-speaker="Max – Schlussgedanke">
+      <div class="slide-inner">
+        <span class="section-badge">Abschnitt 5 · Fazit</span>
+        <h2>Schlussgedanke</h2>
+        <ul class="bullets">
+          <li
+            style="font-size: 1.25rem; font-style: italic; color: var(--accent); margin-bottom: 25px; border-left: 4px solid var(--accent); padding-left: 15px;">
+            "Roterde ist der Spiegel der Tropen: Sie zeigt, wie weit Klima und Zeit Böden verändern können – und wie
+            schmal der Grat ist zwischen ökologisch wertvollem Regenwaldstandort und ausgelaugter Problemfläche, wenn
+            der Mensch falsch wirtschaftet."
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -894,6 +842,12 @@
     </div>
   </div>
 
+  </div>
+
+  <!-- Fullscreen Modal -->
+  <div id="imageModal" class="fullscreen-modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img class="fullscreen-content" id="imgModalContent">
   </div>
 
   <script>
@@ -938,6 +892,12 @@
     }
 
     document.addEventListener('keydown', (e) => {
+      // Wenn Modal offen ist, Navigation blockieren
+      if (modal.classList.contains('active')) {
+        if (e.key === 'Escape') closeModal();
+        return;
+      }
+
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
         e.preventDefault();
         updateSlide('next');
@@ -951,6 +911,8 @@
     let touchStartX = 0;
     document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
     document.addEventListener('touchend', (e) => {
+      if (modal.classList.contains('active')) return; // Check added
+
       const diff = touchStartX - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) {
         updateSlide(diff > 0 ? 'next' : 'prev');
@@ -959,8 +921,39 @@
 
     // Click navigation
     document.addEventListener('click', (e) => {
+      // Prevent navigation if the click originated from within the full screen modal, or a fullscreen button
+      if (e.target.closest('.fullscreen-modal') || e.target.closest('.fullscreen-btn') || modal.classList.contains('active')) {
+        return;
+      }
+
       if (e.clientX > window.innerWidth * 0.6) updateSlide('next');
       else if (e.clientX < window.innerWidth * 0.4) updateSlide('prev');
+    });
+
+    // Fullscreen Modal Logic
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("imgModalContent");
+
+    function openModal(imgSrc) {
+      modal.classList.add("active");
+      modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+      modal.classList.remove("active");
+    }
+
+    modal.addEventListener('click', (e) => {
+      // Close only if clicked on background, not on the image itself
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
     });
 
     updateUI();

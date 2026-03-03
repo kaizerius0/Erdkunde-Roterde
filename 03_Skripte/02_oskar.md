@@ -1,41 +1,10 @@
-# Sprechskript – Oskar
-## Abschnitt 2: Verbreitung & Entstehungsbedingungen
+# Oskar – Globale Verbreitung (ca. 2 Min.)
 
----
-
-### Einstieg
-- Malte hat erklärt, was Roterde ist
-- jetzt: **wo** kommt sie vor, und **warum** genau dort?
-
-### Globale Verbreitung
-- Ferralsole kommen in den **feuchten Tropen und Subtropen** vor
-- Hauptgebiete:
-  - **Südamerika**: Amazonasbecken und Cerrado – über 40 % der Landesfläche Brasiliens
-  - **Afrika**: Kongobecken, Westafrika, Teile Madagaskars
-  - **Südostasien**: Borneo, Sumatra, Teile Indiens
-  - **Australien**: Nordaustralien (kleinere Vorkommen)
-- insgesamt: ca. **7,5 %** der eisfreien Landoberfläche weltweit
-
-### Warum genau dort? – Drei Faktoren
-- drei Bedingungen müssen gleichzeitig erfüllt sein:
-  1. **Klima**: ganzjährig warm (> 20 °C), viel Niederschlag (> 1500 mm/Jahr) → starke Verwitterung
-  2. **Geologie**: alte, stabile Landoberflächen – sogenannte Kratone (z.B. Brasilianischer Schild, Afrikanischer Schild)
-  3. **Zeit**: der Prozess braucht Hunderttausende bis Millionen Jahre ohne Unterbrechung
-
-### Warum nicht in Europa?
-- in Europa fehlen alle drei Voraussetzungen:
-  - **Eiszeiten** haben die Bodenentwicklung unterbrochen und junge Sedimente hinterlassen
-  - kühleres Klima → deutlich langsamere Verwitterung
-  - unsere Böden sind geologisch sehr jung
-
-### Wie entsteht Roterde? – Ferrallitisierung
-- der Entstehungsprozess heißt **Ferrallitisierung**
-- was passiert:
-  - unter tropischen Bedingungen verwittert das Gestein extrem stark
-  - lösliche Bestandteile werden **ausgewaschen** (Kalzium, Magnesium, Kalium, Silizium)
-  - übrig bleiben **Eisen- und Aluminiumoxide** → die geben dem Boden die rote Farbe
-  - als Tonmineral entsteht hauptsächlich **Kaolinit** (kann Nährstoffe schlecht speichern)
-- der Boden ist das **Endprodukt extremer Verwitterung** – alles Lösliche ist raus
-
-### Übergang
-→ Oskar hat gezeigt, wo Roterde vorkommt und wie sie entsteht – Luc erklärt jetzt, wie dieser Boden aufgebaut ist und welche Eigenschaften er hat.
+- **Klimazone**: Roterden sind streng begrenzt auf das immerfeuchte, warme Tropenklima zwischen ca. 20° Nord und 20° Süd (Regenwald und teils Feuchtsavanne).
+- **Fläche**: Das ist gigantisch, sie bedecken weltweit ca. 750 Millionen Hektar und sind dort oft der dominierende Bodentyp.
+- **Hauptregionen**: Finden sich auf alten Kontinentalschilden, vor allem in Südamerika (Zentralamazonien, Brasilianischer Schild) und Zentralafrika (Kongo-Becken), sowie Madagaskar und Nordaustralien.
+- **Zusammenhang**: Die hohen Temperaturen und die enorme Feuchtigkeit sind absolut zwingend, damit diese Bodenbildung überhaupt stattfinden kann. 
+- **Topographie / Raumtypisch**: Man findet sie fast immer auf alten, geologisch stabilen, flachwelligen Plateaus.
+- **Ausnahmen & Besonderheiten**: 
+  - In Südostasien ist Ferralsol deutlich seltener, weil dort junge Gebirge und Vulkane die Landoberflächen ständig verjüngen. Es fehlt dort einfach die *Zeit* (Millionen Jahre).
+  - In Deutschland gibt es kleinräumig noch fossile Reste aus dem Tertiär, diese nennt man heute *Ferrallit*.

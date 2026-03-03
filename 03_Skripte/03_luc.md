@@ -1,40 +1,18 @@
-# Sprechskript – Luc
-## Abschnitt 3: Aufbau, Eigenschaften & Struktur
+# Luc – Entstehung & Merkmale (ca. 3 Min.)
 
----
+**Entstehung (Ferrallitisierung)**
+- **Bedingung**: Es beginnt mit alten Silikatgesteinen (Granit, Basalt), die über *Millionen von Jahren* ungestört unter extremer Dauerhitze und Niederschlägen verwittern.
+- **Prozess 1 (Basenauswaschung)**: Starke Regenfälle waschen leicht lösliche Ionen wie Kalium, Calcium, Magnesium radikal aus dem Boden.
+- **Prozess 2 (Desilifizierung)**: Auch Kieselsäure wird ausgewaschen. Fast nur noch sehr schwerlösliches Eisen und Aluminium bleiben zurück.
+- **Prozess 3 (Ferrallitisierung)**: Der Bodenrest besteht am Ende fast nur noch aus Quarz, dem sehr einfachen Tonmineral *Kaolinit* und extrem viel aufoxidiertem Eisen (Hämatit). Das gibt diesem Boden die typische rote Farbe.
 
-### Einstieg
-- Oskar hat erklärt, wo und warum Roterde vorkommt
-- jetzt: **wie sieht dieser Boden aus** und wie funktioniert er?
+**Bodenhorizonte (Aufbau)**
+- **A-Horizont (Humus)**: Oben gibt es nur eine extrem geringe organische Auflage. Warum? Wegen der hohen Temperaturen und Feuchte wird organisches Material durch Bodenlebewesen in Tagen bis Wochen komplett zersetzt.
+- **B-Horizont (Verwitterung)**: Dieser Horizont ist mehrere Meter dick, intensiv gelb-orange-rot gefärbt und fast völlig ausgewaschen. Dies nennt man den "ferralischen Horizont".
+- **C-Horizont (Ausgangsgestein)**: Das Gestein liegt extrem tief (oft 5 bis 20 Meter). So tief, dass Pflanzenwurzeln dort gar nicht hinkommen, um Mineralstoffe aufzunehmen.
 
-### Aufbau und Tiefe
-- Ferralsole sind **extrem tiefgründig** – das Profil reicht oft 5 bis über 20 Meter tief
-- typischer Aufbau:
-  - dünne organische Auflage oben
-  - darunter ein **intensiv rot gefärbter Haupthorizont** (kann mehrere Meter mächtig sein)
-  - dann ein gradueller Übergang ins verwitterte Ausgangsgestein
-- die Rotfärbung kommt von den **Eisenoxiden**, die sich über Jahrmillionen angereichert haben
-
-### Physikalische Eigenschaften
-- gute **Krümelstruktur** und Durchlüftung
-- relativ gute Wasserdurchlässigkeit (stabile Bodenaggregate)
-- **aber**: ohne Vegetationsbedeckung stark **erosionsanfällig**
-  - tropische Starkregen tragen den Oberboden schnell ab
-
-### Chemische Eigenschaften (geografisch relevant)
-- **pH 4–5,5** → stark sauer
-- **extrem nährstoffarm**: die wichtigen Pflanzennährstoffe (Kalzium, Magnesium, Kalium) sind ausgewaschen
-- **Phosphat** wird im Boden gebunden und ist für Pflanzen nicht verfügbar
-- der Boden kann Nährstoffe **schlecht speichern** (niedrige Austauschkapazität)
-
-### Das Nährstoff-Paradox
-- die große Frage: **wie kann auf so armem Boden dichter Regenwald wachsen?**
-- Antwort: **geschlossener Nährstoffkreislauf**
-  - Blätter und Äste fallen ab → werden sofort von Mikroorganismen zersetzt
-  - die Nährstoffe werden direkt von den Wurzeln wieder aufgenommen
-  - der Boden ist nur ein **Durchgangsmedium** – die Nährstoffe stecken in der Vegetation
-- im Amazonas-Regenwald: **7–10 Tonnen Streufall pro Hektar pro Jahr**
-- **Humus** in der dünnen Oberschicht ist entscheidend für die Bodenfruchtbarkeit
-
-### Übergang
-→ Diese Eigenschaften erklären, warum die Nutzung von Roterde so problematisch ist – das zeigt jetzt Chris.
+**Merkmale & Nährstoff-Paradox**
+- **Sauer & Nährstoffarm**: Der Boden ist extrem tiefgründig und chemisch sehr sauer (pH 4 bis 5,5). Es gibt fast keine Kationenaustauschkapazität (KAK), d.h. der Boden kann kaum Nährstoffe speichern (wie ein löchriges Fass).
+- **Physikalisch exzellent**: Trotzdem ist der Boden gut! Er bildet durch Mikroaggregation sogenannte *Pseudosande*. Er trocknet nicht rissig aus, bleibt porös, wasserdurchlässig und physikalisch stabil.
+- **Das Paradox**: Wie kann überhaupt ein Regenwald darauf wachsen?
+- **Die Lösung**: Der gigantische Regenwald existiert durch einen extrem engen, geschlossenen Nährstoffkreislauf. Fast alle verfügbaren Nährstoffe des gesamten Waldes stecken *in der oberirdischen Biomasse* (den Bäumen und toten Blättern), und *nicht* tief unten im anorganischen Boden! Krankt der Wald, ist das System kaputt.
