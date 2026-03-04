@@ -66,7 +66,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 0 var(--layout-pad-x);
+      padding: 48px var(--layout-pad-x) 0 var(--layout-pad-x);
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease, transform 0.5s ease;
@@ -89,7 +89,7 @@
     .slide-inner {
       max-width: var(--layout-max-width);
       width: 100%;
-      max-height: 60vh;
+      max-height: 65vh;
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -104,13 +104,13 @@
     .zone-a {
       display: flex;
       align-items: center;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
 
     .zone-b {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 28px;
+      margin-bottom: 36px;
     }
 
     .zone-c {
@@ -343,10 +343,11 @@
       background: var(--surface);
       border-radius: var(--card-radius);
       padding: var(--card-padding);
-      text-align: center;
+      text-align: left;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      border-left: 3px solid var(--accent);
     }
 
     .grid-3 .card .icon,
@@ -357,9 +358,9 @@
 
     .grid-3 .card h4,
     .grid-2 .card h4 {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: var(--accent-soft);
     }
 
@@ -526,8 +527,8 @@
 
     .image-zone img {
       width: 100%;
-      max-height: 340px;
-      object-fit: contain;
+      height: 300px;
+      object-fit: cover;
       border-radius: var(--card-radius);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
@@ -864,23 +865,19 @@
     </div>
     <!-- ═══════ LUC – Entstehung und Merkmale ═══════ -->
     <div class="slide" data-speaker="Luc – Entstehung">
-      <div class="slide-inner layout-centered">
+      <div class="slide-inner">
         <div class="zone-a"><span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span></div>
         <div class="zone-b">
           <h2>Wie entsteht Roterde?</h2>
         </div>
-        <div class="zone-c center-v">
-          <div class="flow">
-            <div class="flow-step">1. Ausgangsgestein unter tropischem Klima</div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">2. Intensive chemische Verwitterung (Hitze &amp; Feuchte)</div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">3. Auswaschung leicht löslicher Nährstoffe</div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">4. Zurückbleiben von Eisen- &amp; Aluminiumoxiden (Rot)</div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">5. Millionen Jahre Zeit → Lateritisierung möglich</div>
-          </div>
+        <div class="zone-c">
+          <ul class="bullets">
+            <li><strong>1. Ausgangsgestein</strong> unter tropischem Klima</li>
+            <li><strong>2. Intensive chemische Verwitterung</strong> durch Hitze &amp; Feuchte</li>
+            <li><strong>3. Auswaschung</strong> leicht löslicher Nährstoffe</li>
+            <li><strong>4. Zurückbleiben</strong> von Eisen- &amp; Aluminiumoxiden → rote Farbe</li>
+            <li><strong>5. Millionen Jahre Zeit</strong> → Lateritisierung möglich</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -936,27 +933,16 @@
       </div>
     </div>
     <div class="slide" data-speaker="Luc – Nährstoffkreislauf">
-      <div class="slide-inner layout-centered">
+      <div class="slide-inner">
         <div class="zone-a"><span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span></div>
         <div class="zone-b">
           <h2>Nährstoffkreislauf im Regenwald</h2>
         </div>
-        <div class="zone-c center-v">
-          <p class="subtitle">Warum wächst der Wald auf armem Boden?</p>
-          <div class="cycle">
-            <div class="cycle-node">Baum</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Blattfall</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Zersetzung</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Wurzeln</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Baum</div>
-          </div>
-          <ul class="bullets content-centered">
+        <div class="zone-c">
+          <ul class="bullets">
+            <li><strong>Kreislauf:</strong> Baum → Blattfall → Zersetzung → Wurzeln → Baum</li>
             <li><strong>Eingeschlossenes System:</strong> Nährstoffe stecken in der Biomasse, nicht im Boden.</li>
-            <li><strong>Kurzschluss:</strong> Boden ist nur eine "Durchgangsstation".</li>
+            <li><strong>Kurzschluss:</strong> Boden ist nur eine "Durchgangsstation" – kein Speicher.</li>
           </ul>
         </div>
       </div>
@@ -1056,17 +1042,18 @@
       <div class="slide-inner">
         <div class="zone-a"><span class="section-badge">Abschnitt 5 · Fazit</span></div>
         <div class="zone-b">
-          <h2>Spiegel der Tropen</h2>
+          <h2>Roterde als Ergebnis tropischer Prozesse</h2>
         </div>
         <div class="zone-c">
           <ul class="bullets">
-            <li><strong>Synthese:</strong> Roterde ist kein "Zufall", sondern das logische Produkt aus:
-              <br /><em>Hohen Temperaturen + Starkregen + Jahrmillionen Zeit.</em>
+            <li><strong>Logisches Produkt:</strong> Tropisches Klima + Millionen Jahre Zeit + stabiles Gestein →
+              maximale Verwitterung → Ferralsol</li>
+            <li><strong>Spiegel der Tropen:</strong> Symbol für die Extreme – maximale Verwitterung, minimale Nährstoffe
             </li>
-            <li><strong>Extremwert:</strong> Er stellt das Endstadium der terrestrischen Bodenentwicklung dar.</li>
-            <li><strong>Paradoxon:</strong> Ein lebensfeindlicher Boden, der eines der artenreichsten Ökosysteme der
-              Erde
-              trägt.</li>
+            <li><strong>Paradoxon:</strong> Trotz extremer chemischer Armut wächst der artenreichste Wald der Erde
+              darauf</li>
+            <li><strong>Erklärung:</strong> Der Regenwald betreibt sein eigenes Nährstoffrecycling – der Boden ist nur
+              Träger</li>
           </ul>
         </div>
       </div>
@@ -1078,45 +1065,78 @@
           <h2>Geografische Bewertung</h2>
         </div>
         <div class="zone-c">
-          <div class="compare">
-            <div class="compare-card">
-              <h3>Risiken ⚠️</h3>
-              <ul>
-                <li>Massive Degradation nach Rodung</li>
-                <li>Irreversible Laterisierung</li>
-                <li>Nährstoff-Abhängigkeit</li>
-              </ul>
-            </div>
-            <div class="compare-card alt">
-              <h3>Chancen ✨</h3>
-              <ul>
-                <li>Bauxit-Lagerstätten (Industrie)</li>
-                <li>Stabiler Baugrund</li>
-                <li>Nachhaltige Agroforst-Nutzung</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="bullets">
+            <li><strong>Ökologisch sensibel:</strong> Der Regenwald-Nährstoffkreislauf hängt an intakter Vegetation –
+              Rodung zerstört das System schnell, Erholung dauert Jahrhunderte bis Jahrtausende</li>
+            <li><strong>Ökonomisch wertvoll:</strong> Plantagen (Soja, Kaffee, Kakao, Ölpalme), Viehzucht, Bauxitabbau –
+              aber nur mit richtigem Management dauerhaft nutzbar</li>
+            <li><strong>Riskant bei Fehlbewirtschaftung:</strong> Zu kurze Brache, Monokulturen, unkontrollierte Rodung
+              → Degradation und irreversible Lateritverkrustung in wenigen Jahrzehnten</li>
+          </ul>
         </div>
       </div>
     </div>
     <div class="slide" data-speaker="Max – Schlussfolie">
-      <div class="slide-inner layout-centered">
+      <div class="slide-inner">
         <div class="zone-a"><span class="section-badge">Abschluss</span></div>
         <div class="zone-b">
-          <h2>Zusammenfassung</h2>
+          <h2>Fachliche Bilanz</h2>
         </div>
-        <div class="zone-c center-v">
-          <ul class="bullets content-centered">
-            <li><strong>Roterde</strong> ist mehr als nur "roter Dreck" – sie ist das Fundament der Tropen.</li>
-            <li>Ihr Schutz ist der Schlüssel zum Erhalt der tropischen Regenwälder.</li>
+        <div class="zone-c">
+          <ul class="bullets">
+            <li><strong>1.</strong> Ferralsol ist das Produkt extremer Verwitterung über Millionen Jahre in den Tropen
+            </li>
+            <li><strong>2.</strong> Physikalisch stabil, chemisch extrem arm</li>
+            <li><strong>3.</strong> Die Fruchtbarkeit des Regenwaldes basiert auf dem biologischen Kreislauf – nicht auf
+              dem Boden</li>
+            <li><strong>4.</strong> Rodung zerstört diesen Kreislauf → der Boden zeigt seine wahre Armut</li>
+            <li><strong>5.</strong> Dauerhafte Nutzung ist möglich – aber nur mit gezieltem Management</li>
           </ul>
-          <div class="quote-block content-centered">
-            <p class="quote-text">
-              "Wer den Boden der Tropen versteht, versteht die Zerbrechlichkeit dieses Lebensraums."
-            </p>
-          </div>
-          <p class="closing-note">
+          <p class="closing-note" style="text-align:left; margin-top: 32px;">
             VIELEN DANK FÜR EURE AUFMERKSAMKEIT!</p>
+        </div>
+      </div>
+    </div>
+    <!-- ═══════ QUELLEN ═══════ -->
+    <div class="slide" data-speaker="">
+      <div class="slide-inner">
+        <div class="zone-a"><span class="section-badge">Quellen</span></div>
+        <div class="zone-b">
+          <h2>Quellenverzeichnis</h2>
+        </div>
+        <div class="zone-c">
+          <ul class="bullets" style="font-size: 0.82rem; gap: 12px;">
+            <li><a href="https://de-academic.com/dic.nsf/dewiki/437848" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">de-academic.com</a> – Ferralsol / Laterit</li>
+            <li><a href="https://de.wikipedia.org/wiki/Ferralsol" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">wikipedia.org</a> – Ferralsol</li>
+            <li><a
+                href="https://geohilfe.de/physische-geographie/bodengeographie/bodenbildung/prozesse-der-bodenbildung/ferralitiserung-definition-ablauf-bodentyp"
+                target="_blank" style="color: var(--accent-soft); text-decoration: none;">geohilfe.de</a> –
+              Ferralisierung: Definition, Ablauf, Bodentyp</li>
+            <li><a href="https://www.fao.org/soils-portal/soil-survey/soil-classification" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">fao.org</a> – Soil Classification (IUSS/WRB)
+            </li>
+            <li><a href="https://www.bodenkunde-online.de" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">bodenkunde-online.de</a> – Bodenkunde Lexikon
+            </li>
+            <li><a href="https://www.spektrum.de/lexikon/geowissenschaften/laterit" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">spektrum.de</a> – Lexikon Geowissenschaften:
+              Laterit</li>
+            <li><a href="https://www.agrarraum.info/lexikon/ferralsole" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">agrarraum.info</a> – Lexikon: Ferralsole</li>
+            <li><a href="https://www.bgr.bund.de/DE/Themen/Boden/bodennode.html" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">bgr.bund.de</a> – Bundesanstalt für
+              Geowissenschaften und Rohstoffe</li>
+            <li><a href="https://www.bayceer.uni-bayreuth.de/bophy/en/lehre/html/43618/Tropenboeden.pdf" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">bayceer.uni-bayreuth.de</a> – Tropenböden
+              (PDF)</li>
+            <li><a href="https://wrb.isric.org/files/FERRALSOLS.pdf" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">wrb.isric.org</a> – Ferralsols WRB (PDF)</li>
+            <li><a href="https://www.researchgate.net/publication/329682097Ferralsols" target="_blank"
+                style="color: var(--accent-soft); text-decoration: none;">researchgate.net</a> – Ferralsols
+              (Wissenschaftliche Publikation)</li>
+          </ul>
         </div>
       </div>
     </div>
