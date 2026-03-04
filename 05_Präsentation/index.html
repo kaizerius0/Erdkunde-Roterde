@@ -19,6 +19,17 @@
       --text-dim: #666;
       --earth-warm: #a0522d;
       --earth-light: #cd853f;
+
+      /* ─── Layout System ─── */
+      --layout-max-width: 1200px;
+      --layout-pad-x: 80px;
+      --layout-pad-y: 60px;
+      --spacing-badge-to-title: 24px;
+      --spacing-title-to-content: 36px;
+      --spacing-content-gap: 24px;
+      --spacing-columns-gap: 40px;
+      --card-padding: 28px;
+      --card-radius: 12px;
     }
 
     * {
@@ -51,9 +62,10 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      padding: 60px 80px;
+      padding: var(--layout-pad-y) var(--layout-pad-x);
+      padding-top: 100px;
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease, transform 0.5s ease;
@@ -73,29 +85,29 @@
 
     /* ─── Slide Content ─── */
     .slide-inner {
-      max-width: 1000px;
+      max-width: var(--layout-max-width);
       width: 100%;
     }
 
     .section-badge {
       display: inline-block;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--accent-soft);
       background: var(--accent-glow);
-      border: 1px solid rgba(192, 57, 43, 0.3);
-      padding: 4px 14px;
+      border: 1px solid rgba(192, 57, 43, 0.4);
+      padding: 6px 18px;
       border-radius: 20px;
-      margin-bottom: 20px;
+      margin-bottom: var(--spacing-badge-to-title);
     }
 
     .slide h1 {
-      font-size: 2.8rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 12px;
+      line-height: 1.1;
+      margin-bottom: 16px;
       background: linear-gradient(135deg, var(--text), var(--earth-light));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -103,10 +115,10 @@
     }
 
     .slide h2 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       font-weight: 600;
-      line-height: 1.3;
-      margin-bottom: 30px;
+      line-height: 1.25;
+      margin-bottom: var(--spacing-title-to-content);
       color: var(--text);
     }
 
@@ -136,13 +148,13 @@
     }
 
     .bullets li {
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: var(--text);
-      padding: 14px 20px;
+      padding: 18px 26px;
       background: var(--surface);
-      border-radius: 10px;
-      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      border-left: 4px solid var(--accent);
       line-height: 1.5;
     }
 
@@ -159,14 +171,14 @@
     .compare {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: var(--spacing-content-gap);
       width: 100%;
     }
 
     .compare-card {
       background: var(--surface);
-      border-radius: 12px;
-      padding: 28px;
+      border-radius: var(--card-radius);
+      padding: var(--card-padding);
       border-top: 3px solid var(--accent);
     }
 
@@ -194,17 +206,17 @@
 
     .compare-card ul li {
       font-size: 0.95rem;
-      color: var(--text-muted);
+      color: var(--text);
       line-height: 1.5;
-      padding-left: 14px;
+      padding-left: 20px;
       position: relative;
     }
 
     .compare-card ul li::before {
-      content: '→';
+      content: '→ ';
       position: absolute;
       left: 0;
-      color: var(--text-dim);
+      color: var(--accent-soft);
     }
 
     /* ─── Table ─── */
@@ -226,8 +238,8 @@
     }
 
     .data-table td {
-      padding: 12px 16px;
-      font-size: 1rem;
+      padding: 16px 20px;
+      font-size: 1.2rem;
       color: var(--text);
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
@@ -251,14 +263,14 @@
 
     .flow-step {
       background: var(--surface);
-      border-radius: 10px;
-      padding: 16px 28px;
-      font-size: 1rem;
+      border-radius: 12px;
+      padding: 20px 32px;
+      font-size: 1.2rem;
       font-weight: 500;
       text-align: center;
-      border-left: 3px solid var(--accent);
+      border-left: 4px solid var(--accent);
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     .flow-arrow {
@@ -267,36 +279,47 @@
       padding: 4px 0;
     }
 
-    /* ─── 3 Column Grid ─── */
-    .grid-3 {
+    /* ─── Column Grids ─── */
+    .grid-2 {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-content-gap);
       width: 100%;
     }
 
-    .grid-3 .card {
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--spacing-content-gap);
+      width: 100%;
+    }
+
+    .grid-3 .card,
+    .grid-2 .card {
       background: var(--surface);
-      border-radius: 12px;
-      padding: 24px;
+      border-radius: var(--card-radius);
+      padding: var(--card-padding);
       text-align: center;
     }
 
-    .grid-3 .card .icon {
+    .grid-3 .card .icon,
+    .grid-2 .card .icon {
       font-size: 2rem;
       margin-bottom: 12px;
     }
 
-    .grid-3 .card h4 {
-      font-size: 1rem;
+    .grid-3 .card h4,
+    .grid-2 .card h4 {
+      font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: var(--accent-soft);
     }
 
-    .grid-3 .card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
+    .grid-3 .card p,
+    .grid-2 .card p {
+      font-size: 0.95rem;
+      color: var(--text);
       line-height: 1.5;
     }
 
@@ -404,21 +427,83 @@
       opacity: 0.5;
     }
 
+    /* ─── Layout Helpers ─── */
+    .layout-split {
+      display: flex;
+      gap: var(--spacing-columns-gap);
+      align-items: center;
+      width: 100%;
+    }
+
+    .layout-split>*:first-child {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .layout-split>*:last-child {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .layout-split-reverse {
+      display: flex;
+      gap: var(--spacing-columns-gap);
+      align-items: center;
+      width: 100%;
+      flex-direction: row-reverse;
+    }
+
+    .layout-split-reverse>* {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .layout-centered {
+      text-align: center;
+    }
+
+    .content-centered {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-zone {
+      text-align: center;
+    }
+
+    .image-zone img {
+      width: 100%;
+      border-radius: var(--card-radius);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .image-zone img.contained {
+      width: auto;
+      max-height: 400px;
+      max-width: 100%;
+    }
+
     /* ─── Title Slide Special ─── */
+    .slide.title-center {
+      justify-content: center;
+      padding-top: var(--layout-pad-y);
+    }
+
     .title-slide {
       text-align: center;
     }
 
     .title-slide h1 {
-      font-size: 3.4rem;
-      margin-bottom: 16px;
+      font-size: 4.2rem;
+      margin-bottom: 12px;
     }
 
     .title-slide .authors {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: var(--text-muted);
       font-weight: 300;
-      margin-top: 24px;
+      margin-top: 20px;
       letter-spacing: 1px;
     }
 
@@ -504,6 +589,37 @@
       color: var(--accent-soft);
       border-color: rgba(192, 57, 43, 0.3);
     }
+
+    /* ─── Quote & Closing ─── */
+    .quote-block {
+      background: var(--surface);
+      padding: 40px;
+      border-radius: 15px;
+      border-left: 4px solid var(--accent);
+      margin-top: var(--spacing-content-gap);
+    }
+
+    .quote-text {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--accent-soft);
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+
+    .closing-note {
+      margin-top: 60px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    /* Centered content blocks keep left-aligned text for bullets */
+    .layout-centered .bullets,
+    .content-centered.bullets {
+      text-align: left;
+      margin-bottom: var(--spacing-content-gap);
+    }
   </style>
 </head>
 
@@ -517,12 +633,11 @@
   <div class="slides-wrapper" id="slides">
 
     <!-- FOLIE 1: TITEL -->
-    <div class="slide active" data-speaker="">
+    <div class="slide active title-center" data-speaker="">
       <div class="slide-inner title-slide">
         <h1>Roterde – Ferralsol / Laterit</h1>
         <div class="earth-line"></div>
-        <h2 style="font-weight: 300; font-size: 1.4rem; color: var(--text-muted); margin-bottom: 0;">
-          Geographie-Präsentation</h2>
+        <h2 class="course">Geographie-Präsentation</h2>
         <p class="authors">Oskar · Chris · Luc · Malte · Max</p>
       </div>
     </div>
@@ -532,17 +647,17 @@
       <div class="slide-inner">
         <span class="section-badge">Abschnitt 1 · Einführung</span>
         <h2>Warum ist dieser Boden rot?</h2>
-        <div style="display: flex; gap: 40px; align-items: center;">
-          <ul class="bullets" style="flex: 1;">
+        <div class="layout-split">
+          <ul class="bullets">
             <li><strong>Auffällig anders:</strong> In den Tropen sind Böden oft leuchtend rot – ganz anders als die
               braunen/grauen Böden bei uns.</li>
             <li><strong>Ursache:</strong> Hoher Gehalt an Eisenoxiden (Hämatit, Goethit), die durch extreme Verwitterung
               entstehen.</li>
             <li><strong>Varianz:</strong> Je nach Bedingungen intensiv rot oder eher gelblich-braun.</li>
           </ul>
-          <div style="flex: 1; text-align: center;">
-            <img src="img/tiefe.JPG" alt="Roter Tropenboden"
-              style="width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+          <div class="image-zone">
+            <img src="img/tiefe.JPG" alt="Roter Tropenboden">
+            <div class="fullscreen-btn" onclick="openModal('img/tiefe.JPG')">⛶ Auf Vollbild</div>
           </div>
         </div>
       </div>
@@ -591,16 +706,15 @@
       <div class="slide-inner">
         <span class="section-badge">Abschnitt 2 · Globale Verbreitung</span>
         <h2>Wo kommt Roterde vor?</h2>
-        <div style="display: flex; gap: 40px; align-items: flex-start;">
-          <ul class="bullets" style="flex: 1;">
+        <div class="layout-split">
+          <ul class="bullets">
             <li><strong>Hauptgürtel:</strong> Zwischen 20° N und 20° S – in den feuchtwarmen Tropen.</li>
             <li><strong>Regionen:</strong> Amazonien, Kongobecken, Westafrika, Südostasien, Nordaustralien.</li>
             <li><strong>Anteil:</strong> Ca. 7,5 % der eisfreien Landoberfläche weltweit.</li>
             <li><strong>Beispiel Brasilien:</strong> Hier nehmen Ferralsole über 40 % der Landesfläche ein.</li>
           </ul>
-          <div style="flex: 1; text-align: center;">
-            <img src="img/verbreitung.jpg" alt="Weltkarte Verbreitung"
-              style="width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+          <div class="image-zone">
+            <img src="img/verbreitung.jpg" alt="Weltkarte Verbreitung">
             <div class="fullscreen-btn" onclick="openModal('img/verbreitung.jpg')">⛶ Auf Vollbild</div>
           </div>
         </div>
@@ -613,19 +727,19 @@
         <h2>Warum genau dort?</h2>
         <div class="grid-3">
           <div class="card">
-            <div class="icon">☀️</div>
             <h4>Klima</h4>
-            <p>Ganzjährig feucht-tropisch & warm. Motor für intensive chemische Verwitterung.</p>
+            <p>Ganzjährig feucht-tropisch &amp; warm. Motor für intensive
+              chemische Verwitterung.</p>
           </div>
           <div class="card">
-            <div class="icon">⏳</div>
             <h4>Zeit</h4>
-            <p>Millionen Jahre ohne Störung (keine Eiszeiten). Extrem alte Landoberflächen.</p>
+            <p>Millionen Jahre ohne Störung (keine Eiszeiten). Extrem alte
+              Landoberflächen.</p>
           </div>
           <div class="card">
-            <div class="icon">💎</div>
             <h4>Geologie</h4>
-            <p>Alte Kontinentalschilde (Brasilien, Afrika). Tektonisch extrem stabil.</p>
+            <p>Alte Kontinentalschilde (Brasilien, Afrika). Tektonisch
+              extrem stabil.</p>
           </div>
         </div>
       </div>
@@ -666,17 +780,17 @@
 
     <!-- ═══════ LUC – Entstehung und Merkmale ═══════ -->
     <div class="slide" data-speaker="Luc – Entstehung">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
+      <div class="slide-inner layout-centered">
+        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
         <h2>Wie entsteht Roterde?</h2>
         <div class="flow">
           <div class="flow-step">1. Ausgangsgestein unter tropischem Klima</div>
           <div class="flow-arrow">↓</div>
-          <div class="flow-step">2. Intensive chemische Verwitterung (Hitze & Feuchte)</div>
+          <div class="flow-step">2. Intensive chemische Verwitterung (Hitze &amp; Feuchte)</div>
           <div class="flow-arrow">↓</div>
           <div class="flow-step">3. Auswaschung leicht löslicher Nährstoffe</div>
           <div class="flow-arrow">↓</div>
-          <div class="flow-step">4. Zurückbleiben von Eisen- & Aluminiumoxiden (Rot)</div>
+          <div class="flow-step">4. Zurückbleiben von Eisen- &amp; Aluminiumoxiden (Rot)</div>
           <div class="flow-arrow">↓</div>
           <div class="flow-step">5. Millionen Jahre Zeit → Lateritisierung möglich</div>
         </div>
@@ -685,26 +799,26 @@
 
     <div class="slide" data-speaker="Luc – Bodenprofil">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
+        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
         <h2>Das Bodenprofil</h2>
-        <div style="display: flex; gap: 40px; align-items: center;">
-          <div style="flex: 1; text-align: center;">
-            <img src="img/Aufbau.png" alt="Bodenprofil Schema"
-              style="max-height: 400px; max-width: 100%; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
-          </div>
-          <ul class="bullets" style="flex: 1.2;">
+        <div class="layout-split-reverse">
+          <ul class="bullets">
             <li><strong>A-Horizont:</strong> Dünn, kaum organische Auflage. Schneller Humusabbau.</li>
             <li><strong>B-Horizont:</strong> Meterdick, intensiv rot gefärbt. Das eigentliche Verwitterungsprodukt.</li>
             <li><strong>C-Horizont:</strong> Liegt extrem tief. Keine Bedeutung für die Mineralversorgung der Wurzeln.
             </li>
           </ul>
+          <div class="image-zone">
+            <img class="contained" src="img/Aufbau.png" alt="Bodenprofil Schema">
+            <div class="fullscreen-btn" onclick="openModal('img/Aufbau.png')">⛶ Auf Vollbild</div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="slide" data-speaker="Luc – Eigenschaften">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
+        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
         <h2>Physikalisch gut, chemisch schlecht</h2>
         <div class="compare">
           <div class="compare-card">
@@ -728,24 +842,22 @@
     </div>
 
     <div class="slide" data-speaker="Luc – Nährstoffkreislauf">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Entstehung & Merkmale</span>
+      <div class="slide-inner layout-centered">
+        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
         <h2>Nährstoffkreislauf im Regenwald</h2>
-        <div style="text-align: center; margin-bottom: 30px;">
-          <p class="subtitle">Warum wächst der Wald auf armem Boden?</p>
-          <div class="cycle">
-            <div class="cycle-node">Baum</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Blattfall</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Zersetzung</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Wurzeln</div>
-            <div class="cycle-arrow">→</div>
-            <div class="cycle-node">Baum</div>
-          </div>
+        <p class="subtitle">Warum wächst der Wald auf armem Boden?</p>
+        <div class="cycle">
+          <div class="cycle-node">Baum</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-node">Blattfall</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-node">Zersetzung</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-node">Wurzeln</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-node">Baum</div>
         </div>
-        <ul class="bullets">
+        <ul class="bullets content-centered">
           <li><strong>Eingeschlossenes System:</strong> Nährstoffe stecken in der Biomasse, nicht im Boden.</li>
           <li><strong>Kurzschluss:</strong> Boden ist nur eine "Durchgangsstation".</li>
         </ul>
@@ -755,22 +867,22 @@
     <!-- ═══════ CHRIS – Nutzung und Herausforderungen ═══════ -->
     <div class="slide" data-speaker="Chris – Nutzung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
         <h2>Wie wird Roterde genutzt?</h2>
-        <div class="grid-3" style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 15px;">
-          <div class="card" style="padding: 15px;">
+        <div class="grid-2">
+          <div class="card">
             <h4>Wanderfeldbau</h4>
-            <p>Brandrodung & 10–30 J. Brache.</p>
+            <p>Brandrodung &amp; 10–30 J. Brache.</p>
           </div>
-          <div class="card" style="padding: 15px;">
+          <div class="card">
             <h4>Plantagen</h4>
             <p>Kaffee, Tee, Kakao, Soja, Ölpalmen.</p>
           </div>
-          <div class="card" style="padding: 15px;">
+          <div class="card">
             <h4>Weideland</h4>
             <p>Häufig nach der Rodung (v. a. Amazonien).</p>
           </div>
-          <div class="card" style="padding: 15px;">
+          <div class="card">
             <h4>Industrie</h4>
             <p>Bauxitabbau (Aluminiumerz) im Tagebau.</p>
           </div>
@@ -780,7 +892,7 @@
 
     <div class="slide" data-speaker="Chris – Rodung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
         <h2>Das Problem nach der Rodung</h2>
         <ul class="bullets">
           <li><strong>Kurzfristiger Boom:</strong> Brandrodung liefert Asche → hohe Erträge für 2–3 Jahre.</li>
@@ -795,20 +907,23 @@
 
     <div class="slide" data-speaker="Chris – Probleme">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
         <h2>Drei Hauptprobleme</h2>
         <div class="grid-3">
           <div class="card">
             <h4>Verarmung</h4>
-            <p>Boden kann kaum Nährstoffe speichern. Was nicht gedüngt wird, geht verloren.</p>
+            <p>Boden kann kaum Nährstoffe speichern. Was
+              nicht gedüngt wird, geht verloren.</p>
           </div>
           <div class="card">
             <h4>Erosion</h4>
-            <p>Ohne schützendes Blätterdach spült der Starkregen den Oberboden einfach weg.</p>
+            <p>Ohne schützendes Blätterdach spült der
+              Starkregen den Oberboden einfach weg.</p>
           </div>
           <div class="card">
             <h4>Verkrustung</h4>
-            <p>Bei Austrocknung verhärtet der Boden irreversibel (Lateritisierung).</p>
+            <p>Bei Austrocknung verhärtet der Boden
+              irreversibel (Lateritisierung).</p>
           </div>
         </div>
       </div>
@@ -816,16 +931,14 @@
 
     <div class="slide" data-speaker="Chris – Lösungen">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung & Herausforderungen</span>
+        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
         <h2>Lösungsansätze</h2>
-        <div style="display: flex; gap: 30px;">
-          <ul class="bullets" style="flex: 1;">
-            <li><strong>Kalkung:</strong> Hebt den pH-Wert & macht Nährstoffe verfügbar.</li>
-            <li><strong>Düngung:</strong> Gezielte NPK-Gaben (besonders Phosphor).</li>
-            <li><strong>Mulchen:</strong> Schützt vor Erosion & Humusverlust.</li>
-            <li><strong>Agroforst:</strong> Imitiert den Regenwald-Kreislauf (Bäume + Früchte).</li>
-          </ul>
-        </div>
+        <ul class="bullets">
+          <li><strong>Kalkung:</strong> Hebt den pH-Wert &amp; macht Nährstoffe verfügbar.</li>
+          <li><strong>Düngung:</strong> Gezielte NPK-Gaben (besonders Phosphor).</li>
+          <li><strong>Mulchen:</strong> Schützt vor Erosion &amp; Humusverlust.</li>
+          <li><strong>Agroforst:</strong> Imitiert den Regenwald-Kreislauf (Bäume + Früchte).</li>
+        </ul>
       </div>
     </div>
 
@@ -871,20 +984,20 @@
     </div>
 
     <div class="slide" data-speaker="Max – Schlussfolie">
-      <div class="slide-inner">
-        <span class="section-badge">Abschnitt 5 · Fazit</span>
+      <div class="slide-inner layout-centered">
+        <span class="section-badge">Abschluss</span>
         <h2>Zusammenfassung</h2>
-        <ul class="bullets">
+        <ul class="bullets content-centered">
           <li><strong>Roterde</strong> ist mehr als nur "roter Dreck" – sie ist das Fundament der Tropen.</li>
           <li>Ihr Schutz ist der Schlüssel zum Erhalt der tropischen Regenwälder.</li>
-          <li
-            style="font-size: 1.25rem; font-style: italic; color: var(--accent); margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px;">
-            "Wer den Boden der Tropen versteht, versteht die Zerbrechlichkeit dieses Lebensraums."
-          </li>
         </ul>
-        <p style="text-align: center; margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">Vielen Dank für
-          eure
-          Aufmerksamkeit!</p>
+        <div class="quote-block content-centered">
+          <p class="quote-text">
+            "Wer den Boden der Tropen versteht, versteht die Zerbrechlichkeit dieses Lebensraums."
+          </p>
+        </div>
+        <p class="closing-note">
+          VIELEN DANK FÜR EURE AUFMERKSAMKEIT!</p>
       </div>
     </div>
 
