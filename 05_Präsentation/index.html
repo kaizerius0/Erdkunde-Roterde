@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="de">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Roterde – Ferralsol / Laterit</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
   <style>
     :root {
       --bg: #0f0f0f;
@@ -62,10 +64,9 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      padding: var(--layout-pad-y) var(--layout-pad-x);
-      padding-top: 100px;
+      padding: 0 var(--layout-pad-x);
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease, transform 0.5s ease;
@@ -84,9 +85,46 @@
     }
 
     /* ─── Slide Content ─── */
+    /* Content block lives in roughly the middle 60% of the slide */
     .slide-inner {
       max-width: var(--layout-max-width);
       width: 100%;
+      max-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .slide.title-center .slide-inner {
+      max-height: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .zone-a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .zone-b {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .zone-c {
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .zone-c.center-v {
+      justify-content: center;
+      align-items: center;
     }
 
     .section-badge {
@@ -100,7 +138,7 @@
       border: 1px solid rgba(192, 57, 43, 0.4);
       padding: 6px 18px;
       border-radius: 20px;
-      margin-bottom: var(--spacing-badge-to-title);
+      margin-bottom: 0;
     }
 
     .slide h1 {
@@ -118,7 +156,7 @@
       font-size: 2.2rem;
       font-weight: 600;
       line-height: 1.25;
-      margin-bottom: var(--spacing-title-to-content);
+      margin-bottom: 0;
       color: var(--text);
     }
 
@@ -173,6 +211,7 @@
       grid-template-columns: 1fr 1fr;
       gap: var(--spacing-content-gap);
       width: 100%;
+      align-items: start;
     }
 
     .compare-card {
@@ -180,6 +219,9 @@
       border-radius: var(--card-radius);
       padding: var(--card-padding);
       border-top: 3px solid var(--accent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .compare-card.alt {
@@ -285,6 +327,7 @@
       grid-template-columns: 1fr 1fr;
       gap: var(--spacing-content-gap);
       width: 100%;
+      align-items: start;
     }
 
     .grid-3 {
@@ -292,6 +335,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       gap: var(--spacing-content-gap);
       width: 100%;
+      align-items: start;
     }
 
     .grid-3 .card,
@@ -300,6 +344,9 @@
       border-radius: var(--card-radius);
       padding: var(--card-padding);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .grid-3 .card .icon,
@@ -431,8 +478,9 @@
     .layout-split {
       display: flex;
       gap: var(--spacing-columns-gap);
-      align-items: center;
+      align-items: flex-start;
       width: 100%;
+      flex-direction: row;
     }
 
     .layout-split>*:first-child {
@@ -448,7 +496,7 @@
     .layout-split-reverse {
       display: flex;
       gap: var(--spacing-columns-gap);
-      align-items: center;
+      align-items: flex-start;
       width: 100%;
       flex-direction: row-reverse;
     }
@@ -470,10 +518,16 @@
 
     .image-zone {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .image-zone img {
       width: 100%;
+      max-height: 340px;
+      object-fit: contain;
       border-radius: var(--card-radius);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
@@ -487,7 +541,6 @@
     /* ─── Title Slide Special ─── */
     .slide.title-center {
       justify-content: center;
-      padding-top: var(--layout-pad-y);
     }
 
     .title-slide {
@@ -620,18 +673,31 @@
       text-align: left;
       margin-bottom: var(--spacing-content-gap);
     }
+
+    .zone-c>.content-centered {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .zone-c>.cycle {
+      margin-bottom: 24px;
+    }
+
+    /* Slide with layout-centered: center the zone-c too */
+    .slide-inner.layout-centered .zone-c {
+      align-items: center;
+    }
   </style>
 </head>
 
 <body>
-
   <div class="progress-bar" id="progress"></div>
   <div class="slide-counter" id="counter"></div>
   <div class="speaker-tag" id="speaker"></div>
   <div class="nav-hint">← → PFEILTASTEN ZUM NAVIGIEREN</div>
-
   <div class="slides-wrapper" id="slides">
-
     <!-- FOLIE 1: TITEL -->
     <div class="slide active title-center" data-speaker="">
       <div class="slide-inner title-slide">
@@ -641,372 +707,424 @@
         <p class="authors">Oskar · Chris · Luc · Malte · Max</p>
       </div>
     </div>
-
     <!-- ═══════ MALTE – Einführung / Was ist Roterde? ═══════ -->
     <div class="slide" data-speaker="Malte – Einstieg">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 1 · Einführung</span>
-        <h2>Warum ist dieser Boden rot?</h2>
-        <div class="layout-split">
-          <ul class="bullets">
-            <li><strong>Auffällig anders:</strong> In den Tropen sind Böden oft leuchtend rot – ganz anders als die
-              braunen/grauen Böden bei uns.</li>
-            <li><strong>Ursache:</strong> Hoher Gehalt an Eisenoxiden (Hämatit, Goethit), die durch extreme Verwitterung
-              entstehen.</li>
-            <li><strong>Varianz:</strong> Je nach Bedingungen intensiv rot oder eher gelblich-braun.</li>
-          </ul>
-          <div class="image-zone">
-            <img src="img/tiefe.JPG" alt="Roter Tropenboden">
-            <div class="fullscreen-btn" onclick="openModal('img/tiefe.JPG')">⛶ Auf Vollbild</div>
+        <div class="zone-a"><span class="section-badge">Abschnitt 1 · Einführung</span></div>
+        <div class="zone-b">
+          <h2>Warum ist dieser Boden rot?</h2>
+        </div>
+        <div class="zone-c">
+          <div class="layout-split">
+            <ul class="bullets">
+              <li><strong>Auffällig anders:</strong> In den Tropen sind Böden oft leuchtend rot – ganz anders als die
+                braunen/grauen Böden bei uns.</li>
+              <li><strong>Ursache:</strong> Hoher Gehalt an Eisenoxiden (Hämatit, Goethit), die durch extreme
+                Verwitterung
+                entstehen.</li>
+              <li><strong>Varianz:</strong> Je nach Bedingungen intensiv rot oder eher gelblich-braun.</li>
+            </ul>
+            <div class="image-zone">
+              <img alt="Roter Tropenboden" src="img/tiefe.JPG" />
+              <div class="fullscreen-btn" onclick="openModal('img/tiefe.JPG')">⛶ Auf Vollbild</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Malte – Was ist Roterde?">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 1 · Einführung</span>
-        <h2>Was ist Roterde?</h2>
-        <ul class="bullets">
-          <li><strong>Definition:</strong> Tropische Bodenform, extrem stark verwittert und eisenoxidreich.</li>
-          <li><strong>Wissenschaftlich:</strong> Ferralsol (WRB) / Oxisol (USDA Soil Taxonomy).</li>
-          <li><strong>Vorkommen:</strong> Typischer Boden der immerfeuchten Tropen (Regenwald, Feuchtsavanne).</li>
-          <li><strong>Zustand:</strong> Chemisch sehr arm, aber physikalisch stabil und tiefgründig.</li>
-        </ul>
+        <div class="zone-a"><span class="section-badge">Abschnitt 1 · Einführung</span></div>
+        <div class="zone-b">
+          <h2>Was ist Roterde?</h2>
+        </div>
+        <div class="zone-c">
+          <ul class="bullets">
+            <li><strong>Definition:</strong> Tropische Bodenform, extrem stark verwittert und eisenoxidreich.</li>
+            <li><strong>Wissenschaftlich:</strong> Ferralsol (WRB) / Oxisol (USDA Soil Taxonomy).</li>
+            <li><strong>Vorkommen:</strong> Typischer Boden der immerfeuchten Tropen (Regenwald, Feuchtsavanne).</li>
+            <li><strong>Zustand:</strong> Chemisch sehr arm, aber physikalisch stabil und tiefgründig.</li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Malte – Ferralsol vs. Laterit">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 1 · Einführung</span>
-        <h2>Ferralsol vs. Laterit</h2>
-        <div class="compare">
-          <div class="compare-card">
-            <h3>Ferralsol (Bodentyp)</h3>
-            <ul>
-              <li>Der „lebende“, tiefe Bodenkörper</li>
-              <li>Locker, krümelig, gut durchwurzelbar</li>
-              <li>Wissenschaftliche Pedologie</li>
-            </ul>
-          </div>
-          <div class="compare-card alt">
-            <h3>Laterit (Eisenkruste)</h3>
-            <ul>
-              <li>Verhärtete Eisen-Kruste im Boden</li>
-              <li>Steinhart, irreversibel, ziegelartig</li>
-              <li>Nicht jeder Ferralsol hat diese Kruste</li>
-            </ul>
+        <div class="zone-a"><span class="section-badge">Abschnitt 1 · Einführung</span></div>
+        <div class="zone-b">
+          <h2>Ferralsol vs. Laterit</h2>
+        </div>
+        <div class="zone-c">
+          <div class="compare">
+            <div class="compare-card">
+              <h3>Ferralsol (Bodentyp)</h3>
+              <ul>
+                <li>Der „lebende“, tiefe Bodenkörper</li>
+                <li>Locker, krümelig, gut durchwurzelbar</li>
+                <li>Wissenschaftliche Pedologie</li>
+              </ul>
+            </div>
+            <div class="compare-card alt">
+              <h3>Laterit (Eisenkruste)</h3>
+              <ul>
+                <li>Verhärtete Eisen-Kruste im Boden</li>
+                <li>Steinhart, irreversibel, ziegelartig</li>
+                <li>Nicht jeder Ferralsol hat diese Kruste</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- ═══════ OSKAR – Globale Verbreitung / Raumbezug ═══════ -->
     <div class="slide" data-speaker="Oskar – Globale Verbreitung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 2 · Globale Verbreitung</span>
-        <h2>Wo kommt Roterde vor?</h2>
-        <div class="layout-split">
-          <ul class="bullets">
-            <li><strong>Hauptgürtel:</strong> Zwischen 20° N und 20° S – in den feuchtwarmen Tropen.</li>
-            <li><strong>Regionen:</strong> Amazonien, Kongobecken, Westafrika, Südostasien, Nordaustralien.</li>
-            <li><strong>Anteil:</strong> Ca. 7,5 % der eisfreien Landoberfläche weltweit.</li>
-            <li><strong>Beispiel Brasilien:</strong> Hier nehmen Ferralsole über 40 % der Landesfläche ein.</li>
-          </ul>
-          <div class="image-zone">
-            <img src="img/verbreitung.jpg" alt="Weltkarte Verbreitung">
-            <div class="fullscreen-btn" onclick="openModal('img/verbreitung.jpg')">⛶ Auf Vollbild</div>
+        <div class="zone-a"><span class="section-badge">Abschnitt 2 · Globale Verbreitung</span></div>
+        <div class="zone-b">
+          <h2>Wo kommt Roterde vor?</h2>
+        </div>
+        <div class="zone-c">
+          <div class="layout-split">
+            <ul class="bullets">
+              <li><strong>Hauptgürtel:</strong> Zwischen 20° N und 20° S – in den feuchtwarmen Tropen.</li>
+              <li><strong>Regionen:</strong> Amazonien, Kongobecken, Westafrika, Südostasien, Nordaustralien.</li>
+              <li><strong>Anteil:</strong> Ca. 7,5 % der eisfreien Landoberfläche weltweit.</li>
+              <li><strong>Beispiel Brasilien:</strong> Hier nehmen Ferralsole über 40 % der Landesfläche ein.</li>
+            </ul>
+            <div class="image-zone">
+              <img alt="Weltkarte Verbreitung" src="img/verbreitung.jpg" />
+              <div class="fullscreen-btn" onclick="openModal('img/verbreitung.jpg')">⛶ Auf Vollbild</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Oskar – Warum genau dort?">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 2 · Globale Verbreitung</span>
-        <h2>Warum genau dort?</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h4>Klima</h4>
-            <p>Ganzjährig feucht-tropisch &amp; warm. Motor für intensive
-              chemische Verwitterung.</p>
-          </div>
-          <div class="card">
-            <h4>Zeit</h4>
-            <p>Millionen Jahre ohne Störung (keine Eiszeiten). Extrem alte
-              Landoberflächen.</p>
-          </div>
-          <div class="card">
-            <h4>Geologie</h4>
-            <p>Alte Kontinentalschilde (Brasilien, Afrika). Tektonisch
-              extrem stabil.</p>
+        <div class="zone-a"><span class="section-badge">Abschnitt 2 · Globale Verbreitung</span></div>
+        <div class="zone-b">
+          <h2>Warum genau dort?</h2>
+        </div>
+        <div class="zone-c">
+          <div class="grid-3">
+            <div class="card">
+              <h4>Klima</h4>
+              <p>Ganzjährig feucht-tropisch &amp; warm. Motor für intensive
+                chemische Verwitterung.</p>
+            </div>
+            <div class="card">
+              <h4>Zeit</h4>
+              <p>Millionen Jahre ohne Störung (keine Eiszeiten). Extrem alte
+                Landoberflächen.</p>
+            </div>
+            <div class="card">
+              <h4>Geologie</h4>
+              <p>Alte Kontinentalschilde (Brasilien, Afrika). Tektonisch
+                extrem stabil.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Oskar – Vergleich Europa">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 2 · Globale Verbreitung</span>
-        <h2>Warum nicht bei uns?</h2>
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Merkmal</th>
-              <th>Europa</th>
-              <th>Tropen (Roterde)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Bodenalter</td>
-              <td>Jung ( < 15.000 J. nach Eiszeit)</td>
-              <td>Uralt (Millionen Jahre)</td>
-            </tr>
-            <tr>
-              <td>Verwitterung</td>
-              <td>Mäßig (Nährstoffe bleiben)</td>
-              <td>Total (Nährstoffe weg)</td>
-            </tr>
-            <tr>
-              <td>Fruchtbarkeit</td>
-              <td>Hoch (aus dem Boden)</td>
-              <td>Niedrig (nur Biomasse)</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="zone-a"><span class="section-badge">Abschnitt 2 · Globale Verbreitung</span></div>
+        <div class="zone-b">
+          <h2>Warum nicht bei uns?</h2>
+        </div>
+        <div class="zone-c">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Merkmal</th>
+                <th>Europa</th>
+                <th>Tropen (Roterde)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bodenalter</td>
+                <td>Jung ( &lt; 15.000 J. nach Eiszeit)</td>
+                <td>Uralt (Millionen Jahre)</td>
+              </tr>
+              <tr>
+                <td>Verwitterung</td>
+                <td>Mäßig (Nährstoffe bleiben)</td>
+                <td>Total (Nährstoffe weg)</td>
+              </tr>
+              <tr>
+                <td>Fruchtbarkeit</td>
+                <td>Hoch (aus dem Boden)</td>
+                <td>Niedrig (nur Biomasse)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-
     <!-- ═══════ LUC – Entstehung und Merkmale ═══════ -->
     <div class="slide" data-speaker="Luc – Entstehung">
       <div class="slide-inner layout-centered">
-        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
-        <h2>Wie entsteht Roterde?</h2>
-        <div class="flow">
-          <div class="flow-step">1. Ausgangsgestein unter tropischem Klima</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">2. Intensive chemische Verwitterung (Hitze &amp; Feuchte)</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">3. Auswaschung leicht löslicher Nährstoffe</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">4. Zurückbleiben von Eisen- &amp; Aluminiumoxiden (Rot)</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">5. Millionen Jahre Zeit → Lateritisierung möglich</div>
+        <div class="zone-a"><span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span></div>
+        <div class="zone-b">
+          <h2>Wie entsteht Roterde?</h2>
+        </div>
+        <div class="zone-c center-v">
+          <div class="flow">
+            <div class="flow-step">1. Ausgangsgestein unter tropischem Klima</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">2. Intensive chemische Verwitterung (Hitze &amp; Feuchte)</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">3. Auswaschung leicht löslicher Nährstoffe</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">4. Zurückbleiben von Eisen- &amp; Aluminiumoxiden (Rot)</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">5. Millionen Jahre Zeit → Lateritisierung möglich</div>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Luc – Bodenprofil">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
-        <h2>Das Bodenprofil</h2>
-        <div class="layout-split-reverse">
-          <ul class="bullets">
-            <li><strong>A-Horizont:</strong> Dünn, kaum organische Auflage. Schneller Humusabbau.</li>
-            <li><strong>B-Horizont:</strong> Meterdick, intensiv rot gefärbt. Das eigentliche Verwitterungsprodukt.</li>
-            <li><strong>C-Horizont:</strong> Liegt extrem tief. Keine Bedeutung für die Mineralversorgung der Wurzeln.
-            </li>
-          </ul>
-          <div class="image-zone">
-            <img class="contained" src="img/Aufbau.png" alt="Bodenprofil Schema">
-            <div class="fullscreen-btn" onclick="openModal('img/Aufbau.png')">⛶ Auf Vollbild</div>
+        <div class="zone-a"><span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span></div>
+        <div class="zone-b">
+          <h2>Das Bodenprofil</h2>
+        </div>
+        <div class="zone-c">
+          <div class="layout-split-reverse">
+            <ul class="bullets">
+              <li><strong>A-Horizont:</strong> Dünn, kaum organische Auflage. Schneller Humusabbau.</li>
+              <li><strong>B-Horizont:</strong> Meterdick, intensiv rot gefärbt. Das eigentliche Verwitterungsprodukt.
+              </li>
+              <li><strong>C-Horizont:</strong> Liegt extrem tief. Keine Bedeutung für die Mineralversorgung der Wurzeln.
+              </li>
+            </ul>
+            <div class="image-zone">
+              <img alt="Bodenprofil Schema" class="contained" src="img/Aufbau.png" />
+              <div class="fullscreen-btn" onclick="openModal('img/Aufbau.png')">⛶ Auf Vollbild</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Luc – Eigenschaften">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
-        <h2>Physikalisch gut, chemisch schlecht</h2>
-        <div class="compare">
-          <div class="compare-card">
-            <h3>Physikalisch ✓</h3>
-            <ul>
-              <li>Stabile Krümelstruktur ("Pseudosand")</li>
-              <li>Gut durchlüftet und tief durchwurzelbar</li>
-              <li>Wenig erosionsanfällig (wenn bewachsen)</li>
-            </ul>
-          </div>
-          <div class="compare-card alt">
-            <h3>Chemisch ✗</h3>
-            <ul>
-              <li>Extrem nährstoffarm & stark sauer</li>
-              <li>Kann kaum Nährstoffe speichern</li>
-              <li>Phosphor wird an Oxide gebunden (fixiert)</li>
-            </ul>
+        <div class="zone-a"><span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span></div>
+        <div class="zone-b">
+          <h2>Physikalisch gut, chemisch schlecht</h2>
+        </div>
+        <div class="zone-c">
+          <div class="compare">
+            <div class="compare-card">
+              <h3>Physikalisch ✓</h3>
+              <ul>
+                <li>Stabile Krümelstruktur ("Pseudosand")</li>
+                <li>Gut durchlüftet und tief durchwurzelbar</li>
+                <li>Wenig erosionsanfällig (wenn bewachsen)</li>
+              </ul>
+            </div>
+            <div class="compare-card alt">
+              <h3>Chemisch ✗</h3>
+              <ul>
+                <li>Extrem nährstoffarm &amp; stark sauer</li>
+                <li>Kann kaum Nährstoffe speichern</li>
+                <li>Phosphor wird an Oxide gebunden (fixiert)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Luc – Nährstoffkreislauf">
       <div class="slide-inner layout-centered">
-        <span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span>
-        <h2>Nährstoffkreislauf im Regenwald</h2>
-        <p class="subtitle">Warum wächst der Wald auf armem Boden?</p>
-        <div class="cycle">
-          <div class="cycle-node">Baum</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">Blattfall</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">Zersetzung</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">Wurzeln</div>
-          <div class="cycle-arrow">→</div>
-          <div class="cycle-node">Baum</div>
+        <div class="zone-a"><span class="section-badge">Abschnitt 3 · Entstehung &amp; Merkmale</span></div>
+        <div class="zone-b">
+          <h2>Nährstoffkreislauf im Regenwald</h2>
         </div>
-        <ul class="bullets content-centered">
-          <li><strong>Eingeschlossenes System:</strong> Nährstoffe stecken in der Biomasse, nicht im Boden.</li>
-          <li><strong>Kurzschluss:</strong> Boden ist nur eine "Durchgangsstation".</li>
-        </ul>
+        <div class="zone-c center-v">
+          <p class="subtitle">Warum wächst der Wald auf armem Boden?</p>
+          <div class="cycle">
+            <div class="cycle-node">Baum</div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-node">Blattfall</div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-node">Zersetzung</div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-node">Wurzeln</div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-node">Baum</div>
+          </div>
+          <ul class="bullets content-centered">
+            <li><strong>Eingeschlossenes System:</strong> Nährstoffe stecken in der Biomasse, nicht im Boden.</li>
+            <li><strong>Kurzschluss:</strong> Boden ist nur eine "Durchgangsstation".</li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <!-- ═══════ CHRIS – Nutzung und Herausforderungen ═══════ -->
     <div class="slide" data-speaker="Chris – Nutzung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
-        <h2>Wie wird Roterde genutzt?</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h4>Wanderfeldbau</h4>
-            <p>Brandrodung &amp; 10–30 J. Brache.</p>
-          </div>
-          <div class="card">
-            <h4>Plantagen</h4>
-            <p>Kaffee, Tee, Kakao, Soja, Ölpalmen.</p>
-          </div>
-          <div class="card">
-            <h4>Weideland</h4>
-            <p>Häufig nach der Rodung (v. a. Amazonien).</p>
-          </div>
-          <div class="card">
-            <h4>Industrie</h4>
-            <p>Bauxitabbau (Aluminiumerz) im Tagebau.</p>
+        <div class="zone-a"><span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span></div>
+        <div class="zone-b">
+          <h2>Wie wird Roterde genutzt?</h2>
+        </div>
+        <div class="zone-c">
+          <div class="grid-2">
+            <div class="card">
+              <h4>Wanderfeldbau</h4>
+              <p>Brandrodung &amp; 10–30 J. Brache.</p>
+            </div>
+            <div class="card">
+              <h4>Plantagen</h4>
+              <p>Kaffee, Tee, Kakao, Soja, Ölpalmen.</p>
+            </div>
+            <div class="card">
+              <h4>Weideland</h4>
+              <p>Häufig nach der Rodung (v. a. Amazonien).</p>
+            </div>
+            <div class="card">
+              <h4>Industrie</h4>
+              <p>Bauxitabbau (Aluminiumerz) im Tagebau.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Chris – Rodung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
-        <h2>Das Problem nach der Rodung</h2>
-        <ul class="bullets">
-          <li><strong>Kurzfristiger Boom:</strong> Brandrodung liefert Asche → hohe Erträge für 2–3 Jahre.</li>
-          <li><strong>Schneller Absturz:</strong> Starkregen wäscht Nährstoffe aus; Humus wird ohne Schatten sofort
-            abgebaut.
-          </li>
-          <li><strong>Ergebnis:</strong> Die Erträge brechen massiv ein. Die "Fruchtbarkeit" war nur ein einmaliger
-            Verbrauch des Waldes.</li>
-        </ul>
+        <div class="zone-a"><span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span></div>
+        <div class="zone-b">
+          <h2>Das Problem nach der Rodung</h2>
+        </div>
+        <div class="zone-c">
+          <ul class="bullets">
+            <li><strong>Kurzfristiger Boom:</strong> Brandrodung liefert Asche → hohe Erträge für 2–3 Jahre.</li>
+            <li><strong>Schneller Absturz:</strong> Starkregen wäscht Nährstoffe aus; Humus wird ohne Schatten sofort
+              abgebaut.
+            </li>
+            <li><strong>Ergebnis:</strong> Die Erträge brechen massiv ein. Die "Fruchtbarkeit" war nur ein einmaliger
+              Verbrauch des Waldes.</li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Chris – Probleme">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
-        <h2>Drei Hauptprobleme</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h4>Verarmung</h4>
-            <p>Boden kann kaum Nährstoffe speichern. Was
-              nicht gedüngt wird, geht verloren.</p>
-          </div>
-          <div class="card">
-            <h4>Erosion</h4>
-            <p>Ohne schützendes Blätterdach spült der
-              Starkregen den Oberboden einfach weg.</p>
-          </div>
-          <div class="card">
-            <h4>Verkrustung</h4>
-            <p>Bei Austrocknung verhärtet der Boden
-              irreversibel (Lateritisierung).</p>
+        <div class="zone-a"><span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span></div>
+        <div class="zone-b">
+          <h2>Drei Hauptprobleme</h2>
+        </div>
+        <div class="zone-c">
+          <div class="grid-3">
+            <div class="card">
+              <h4>Verarmung</h4>
+              <p>Boden kann kaum Nährstoffe speichern. Was
+                nicht gedüngt wird, geht verloren.</p>
+            </div>
+            <div class="card">
+              <h4>Erosion</h4>
+              <p>Ohne schützendes Blätterdach spült der
+                Starkregen den Oberboden einfach weg.</p>
+            </div>
+            <div class="card">
+              <h4>Verkrustung</h4>
+              <p>Bei Austrocknung verhärtet der Boden
+                irreversibel (Lateritisierung).</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Chris – Lösungen">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span>
-        <h2>Lösungsansätze</h2>
-        <ul class="bullets">
-          <li><strong>Kalkung:</strong> Hebt den pH-Wert &amp; macht Nährstoffe verfügbar.</li>
-          <li><strong>Düngung:</strong> Gezielte NPK-Gaben (besonders Phosphor).</li>
-          <li><strong>Mulchen:</strong> Schützt vor Erosion &amp; Humusverlust.</li>
-          <li><strong>Agroforst:</strong> Imitiert den Regenwald-Kreislauf (Bäume + Früchte).</li>
-        </ul>
+        <div class="zone-a"><span class="section-badge">Abschnitt 4 · Nutzung &amp; Herausforderungen</span></div>
+        <div class="zone-b">
+          <h2>Lösungsansätze</h2>
+        </div>
+        <div class="zone-c">
+          <ul class="bullets">
+            <li><strong>Kalkung:</strong> Hebt den pH-Wert &amp; macht Nährstoffe verfügbar.</li>
+            <li><strong>Düngung:</strong> Gezielte NPK-Gaben (besonders Phosphor).</li>
+            <li><strong>Mulchen:</strong> Schützt vor Erosion &amp; Humusverlust.</li>
+            <li><strong>Agroforst:</strong> Imitiert den Regenwald-Kreislauf (Bäume + Früchte).</li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <!-- ═══════ MAX – Fazit / Geografische Bewertung ═══════ -->
     <div class="slide" data-speaker="Max – Ergebnis tropischer Prozesse">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 5 · Fazit</span>
-        <h2>Spiegel der Tropen</h2>
-        <ul class="bullets">
-          <li><strong>Synthese:</strong> Roterde ist kein "Zufall", sondern das logische Produkt aus:
-            <br><em>Hohen Temperaturen + Starkregen + Jahrmillionen Zeit.</em>
-          </li>
-          <li><strong>Extremwert:</strong> Er stellt das Endstadium der terrestrischen Bodenentwicklung dar.</li>
-          <li><strong>Paradoxon:</strong> Ein lebensfeindlicher Boden, der eines der artenreichsten Ökosysteme der Erde
-            trägt.</li>
-        </ul>
+        <div class="zone-a"><span class="section-badge">Abschnitt 5 · Fazit</span></div>
+        <div class="zone-b">
+          <h2>Spiegel der Tropen</h2>
+        </div>
+        <div class="zone-c">
+          <ul class="bullets">
+            <li><strong>Synthese:</strong> Roterde ist kein "Zufall", sondern das logische Produkt aus:
+              <br /><em>Hohen Temperaturen + Starkregen + Jahrmillionen Zeit.</em>
+            </li>
+            <li><strong>Extremwert:</strong> Er stellt das Endstadium der terrestrischen Bodenentwicklung dar.</li>
+            <li><strong>Paradoxon:</strong> Ein lebensfeindlicher Boden, der eines der artenreichsten Ökosysteme der
+              Erde
+              trägt.</li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Max – Geografische Bewertung">
       <div class="slide-inner">
-        <span class="section-badge">Abschnitt 5 · Fazit</span>
-        <h2>Geografische Bewertung</h2>
-        <div class="compare">
-          <div class="compare-card">
-            <h3>Risiken ⚠️</h3>
-            <ul>
-              <li>Massive Degradation nach Rodung</li>
-              <li>Irreversible Laterisierung</li>
-              <li>Nährstoff-Abhängigkeit</li>
-            </ul>
-          </div>
-          <div class="compare-card alt">
-            <h3>Chancen ✨</h3>
-            <ul>
-              <li>Bauxit-Lagerstätten (Industrie)</li>
-              <li>Stabiler Baugrund</li>
-              <li>Nachhaltige Agroforst-Nutzung</li>
-            </ul>
+        <div class="zone-a"><span class="section-badge">Abschnitt 5 · Fazit</span></div>
+        <div class="zone-b">
+          <h2>Geografische Bewertung</h2>
+        </div>
+        <div class="zone-c">
+          <div class="compare">
+            <div class="compare-card">
+              <h3>Risiken ⚠️</h3>
+              <ul>
+                <li>Massive Degradation nach Rodung</li>
+                <li>Irreversible Laterisierung</li>
+                <li>Nährstoff-Abhängigkeit</li>
+              </ul>
+            </div>
+            <div class="compare-card alt">
+              <h3>Chancen ✨</h3>
+              <ul>
+                <li>Bauxit-Lagerstätten (Industrie)</li>
+                <li>Stabiler Baugrund</li>
+                <li>Nachhaltige Agroforst-Nutzung</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="slide" data-speaker="Max – Schlussfolie">
       <div class="slide-inner layout-centered">
-        <span class="section-badge">Abschluss</span>
-        <h2>Zusammenfassung</h2>
-        <ul class="bullets content-centered">
-          <li><strong>Roterde</strong> ist mehr als nur "roter Dreck" – sie ist das Fundament der Tropen.</li>
-          <li>Ihr Schutz ist der Schlüssel zum Erhalt der tropischen Regenwälder.</li>
-        </ul>
-        <div class="quote-block content-centered">
-          <p class="quote-text">
-            "Wer den Boden der Tropen versteht, versteht die Zerbrechlichkeit dieses Lebensraums."
-          </p>
+        <div class="zone-a"><span class="section-badge">Abschluss</span></div>
+        <div class="zone-b">
+          <h2>Zusammenfassung</h2>
         </div>
-        <p class="closing-note">
-          VIELEN DANK FÜR EURE AUFMERKSAMKEIT!</p>
+        <div class="zone-c center-v">
+          <ul class="bullets content-centered">
+            <li><strong>Roterde</strong> ist mehr als nur "roter Dreck" – sie ist das Fundament der Tropen.</li>
+            <li>Ihr Schutz ist der Schlüssel zum Erhalt der tropischen Regenwälder.</li>
+          </ul>
+          <div class="quote-block content-centered">
+            <p class="quote-text">
+              "Wer den Boden der Tropen versteht, versteht die Zerbrechlichkeit dieses Lebensraums."
+            </p>
+          </div>
+          <p class="closing-note">
+            VIELEN DANK FÜR EURE AUFMERKSAMKEIT!</p>
+        </div>
       </div>
     </div>
-
     <!-- Fullscreen Modal -->
-    <div id="imageModal" class="fullscreen-modal">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <img class="fullscreen-content" id="imgModalContent">
+    <div class="fullscreen-modal" id="imageModal">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <img class="fullscreen-content" id="imgModalContent" />
     </div>
-
     <script>
       const slides = document.querySelectorAll('.slide');
       const progress = document.getElementById('progress');
@@ -1115,6 +1233,7 @@
 
       updateUI();
     </script>
+  </div>
 </body>
 
 </html>
